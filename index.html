@@ -2,26 +2,30 @@
 <head>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
-	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-	
+	<link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap" rel="stylesheet">
+
+	<script src="grid.js"></script>
 	<style>
-	/* General */
+	/* [---General---] */
 	body {
-		background-color: #011627;
+		background-color: white; // #E5E5E5;
+		margin: 0;
 	}
 	* {
 		font: 48px Abel, sans-serif;
-		color: white;
+		color: #02223B;
 	}
 	p {
 		font: 18px Noto Sans, sans;
+		line-height: 150%;
 	}
 	a.button {
 		font: 12px Noto Sans TC, sans;
-		background-color: #FB6678;
+		font-weight: bold;
+		letter-spacing: 0.15em;
+		background-color: #90E0E0;
 		padding: 10px 42px;
 		border-radius: 42px;
 		color: #011627;
@@ -39,78 +43,144 @@
 	}
 	
 	
-	/* Title */
+	/* [---Title---] */
 	#title {
-		transform: translate(0, -15%);
-		margin-bottom: 0;
+		padding: 0;
 	}
-	#title img{
+	#title video{
+		padding: 0;
 		margin: 0;
 		width: 100%;
 		height: auto;
+		overflow: hidden;
 	}
 	#title #titleTextContainer{
 		position: absolute;
-		top: 30%;
-		right: 10%;
+		transform: translate(0, -165%);
+		left: 10%;
 		width: 70%;
 	}
 	#titleTextContainer h1{
-		float: right;
-		font-size: 6vw;
+		float: left;
+		font: 6vw Abhaya Libre, serif;
 		width: 70%;
-		text-align: right;
-		text-shadow: 2px 2px black;
+		text-align: left;
 		margin: 0;
+		color: white;
 	}
 	#titleTextContainer p{
-		background-color: rgba(1, 22, 39, 0.65);
-		color: #FB6678;
+		//background-color: rgba(1, 22, 39, 0.65);
+		color: #C6E4D5;
 		margin: 0;
-		float: right;
-		font-size: 1.5vw;
+		float: left;
+		font: 1.5vw Noto Sans TC, sans;
 		text-align: center;
+		
 	}
 	
-	/* Sections */
+	/* [---Sections---] */
 	div.section {
-		margin: 60px 15%;
+		padding: 60px 15%;
 	}
 	@media only screen and (max-width: 1000px) {
 		div.section {
-			margin: 60px 12%;
+			padding: 60px 12%;
 		}
 	}
 	div.section-body h2{
 		margin-bottom: 0px;
 	}
+	#technology *{
+		color: white;
+	}
+	/* Section Graphics */
+	.section-graphics {
+		margin-top: 60px;
+		position: relative;
+		float: left;
+		width: 40%;
+		background-color: green;
+	}
+	.section-graphics *{
+		position: absolute;
+	}
+	.section-graphics p{
+		margin-top: 10%;
+		margin-left: 1px;
+		left: 0;
+		border-left: 1px solid black;
+		border-top: 1px solid black;
+		display: inline-block;
+		height: 7px;
+		width: 28%;
+		font-size: 0px;
+	}
+	.section-graphics .label{
+		margin: 20% 0 0 0;
+		font: 1.25vw Abel, serif;
+	}
+	.section-graphics .labelNo{
+		margin: 13% 0 0 0;
+		font: 1.5vw Abel, sans-serif;
+	}
+	.section-graphics img{
+		top: 0;
+		left: 10%;
+		width: 75%;
+	}
+	.section-graphics canvas{
+		margin-top: 85%;
+		margin-left: 2%;
+		width: 35%;
+	}
 	
-	/*Card style*/
+	#technology {
+		 padding-bottom: 240px;
+	}
+	
+	@media only screen and (max-width: 1000px) {
+		#technology {
+			padding-bottom: 120px;
+		}
+	}
+	
+	/* [---Card style---]*/
 	ul.cards_container{
 		display: flex;
 		list-style-type: none;
 		padding: 0;
 		flex-wrap: wrap;
+		width: 75%;
+		float: right;
+		margin: 0 0 -8% 0;
+		transform: translate(0, -50%);
+		background-color: white;
+		box-shadow: -5px 10px 100px 5px rgba(144, 224, 224, 0.26);
+		border-radius: 10px;
 	}
+	@media only screen and (max-width: 1000px) {
+		ul.cards_container{
+			width: 100%;
+			float: none;
+			margin: 10% 0 0 0;
+			transform: translate(0, 0);
+		}
+	}
+	
 	li.card {
-		width: 31%;
-		margin: 1%;
+		width: 33.3%;
+		margin: 5% 0%;
+		padding: 0 5%;
 		float: left;
-	}
-	li.card img{
-		max-width: 60%;
-		height: auto;
-		margin: 9px 20%;
+		box-sizing: border-box;
 	}
 	li.card h3{
-		font-size: 30px;
-		text-align: center;
+		font: 30px Abel, serif;
 		margin: 0;
 	}
 	li.card p{
-		font-size: 16px;
-		text-align: center;
-		margin-top: 9px;
+		font: 18px Noto Sans, sans-serif;
+		margin: 9px 0 0 0;
 	}
 	</style>
 </head>
@@ -118,30 +188,42 @@
 <!-- Page body -->
 <body>
 <div id="title">
-	<img id="titleImg", src="homepageTitle.jpg"> 
+	<video playsinline autoplay muted loop>
+		<source src="res/neuron1right.mov" type="video/mp4"/>
+	</video>
 	<div id="titleTextContainer">
-	<h1 id="titleTitle"> BREAKTHROUGH NEUROPSYCHIATRIC TECHNOLOGY </h1>
+	<h1 id="titleTitle"> BREAKTHROUGH NEUROPSYCHIATRIC TECHNOLOGY <br/> </h1>
 	<p id="titleSubtext"> A NOVEL WAY TO TREAT NEUROLOGICAL DISORDERS </p>
 	</div>
 </div>
 
-<div id="about-us" class="section" style="margin-top: 0px">
+<div id="about-us" class="section" style="padding-top: 120px; padding-bottom: 120px;">
 	<div style="float: left;">
-		<h2 style="line-height: 1; margin-top: 0px; text-align: center"> About Us </h2>
+		<h2 style="line-height: 1; margin-top: 2px; text-align: center"> About Us </h2>
 		<a class="button"> LEARN MORE </a>
 	</div>
 	<div style="margin-left: 200px;"> 
-		<p style="margin-bottom: 0px;">NoetherTech is a neuro-optimization company that researches,
+		<p style="margin-bottom: 0px; margin-top: 0px;">NoetherTech is a neuro-optimization company that researches,
 		diagnoses, and treats neurological and psychiatric disorders.</p> 
 		
-		<p style="margin-top: 9px;">Brought by the same innovators behind the Newport Brain 
+		<p style="margin-top: 11px;">Brought by the same innovators behind the Newport Brain 
 		Research Laboratory (NBRL), Brain Treatment Center (BTC) and creators of the MRT and MeRT 
 		technologies currently used by WaveNeuro.</p>
 	</div>
 </div>
 
-<div id="technology" class="section">
-	<div class="section-body">
+<div id="technology" class="section" style="background-color: #4BA9D2;">
+	<div class="section-graphics" style="margin-top: 40px">
+		<canvas id="grid1" width="250" height="250" style="margin-top: 61%;"></canvas>
+		<img src="res/brainTopGray.jpg"></img>
+		<p style="border-color: #C6E4D5;"></p>
+		<h2 class="labelNo" style="color: #C6E4D5"> 01.<br/><br/><h2>
+		<h2 class="label"> Our <br/>Technology <h2>
+		
+		<script> drawGrid("grid1", "#C6E4D5", 12); </script>
+	</div>
+	
+	<div class="section-body"  style="margin-left: 45%;">
 	<h2> A Platform to Restore Brain Health </h2>
 	<p style="margin-bottom: 0px; margin-top: 11px;"> We analyze neural information and utilize our
 	Electromagnetic Brain Pulse (EMBP) neural modulation therapy to optimize brain health and 
@@ -153,35 +235,28 @@
 	
 	<a class="button"> LEARN MORE </a>
 	</div>
-	
+</div>
+<!--div class="cards_container_wrapper"-->
 	<ul class="cards_container">
-		<!-- Icons -->
-		<li class="card"><div>
-			<img src="med-icon.png">
-		</div></li>
-		<li class="card"><div>
-			<img src="drug-icon.png">
-		</div></li>
-		<li class="card"><div>
-			<img src="drug-icon.png">
-		<!-- Text -->
-		</div></li>
-		<li class="card"><div>
+		<li class="card" style="border-right: 1px solid #C6E4D5;"><div>
 			<h3> Non-Invasive </h3>
-			<p>It is pain-free. Say hooray</p>
+			<p>EMBP is pain-free and non-invasive. It doesn’t involve surgery,
+			anesthesia, or sedation. </p>
+		</div></li>
+		<li class="card" style="border-right: 1px solid #C6E4D5;"><div>
+			<h3> Drug Free</h3>
+			<p>EMBP is a drug-free treatment that uses electromagnetic
+			pulses to retrain brain activity</p>
 		</div></li>
 		<li class="card"><div>
-			<h3> SMTHN ELSE </h3>
-			<p> HEY PUT SMTHN ELSE </p>
-		</div></li>
-		<li class="card"><div>
-			<h3> Drug Free </h3>
-			<p>Non-addictive</p>
+			<h3> Non-Systemic </h3>
+			<p>Our treatment has no effects on other areas of your
+			body as antidepressants do.</p>
 		</div></li>
 	</ul>
-</div>
+	<!--/div-->
 
-<div id="history" class="section">
+<div id="history" class="section" style="overflow: hidden;">
 	<div class="section-body">
 	<h2> Why EMBP? </h2>
 	<p style="margin-bottom: 0px; margin-top: 11px;"> Brain-wave-guided transcranial magnetic 
@@ -197,22 +272,32 @@
 	advanced and proprietary technology, developed and patented by NoetherTech. In essence, the 
 	treatment identifies the patient’s brain condition through quantitative analyses and delivers 
 	a customized, pulse-matching, electromagnetic stimulation to normalize the brain condition. </p>
-	<a class="button" style="background-color: #41EAD4"> LEARN MORE </a>
+	<a class="button"> LEARN MORE </a>
 	</div>
 </div>
 
 
 <div id="science" class="section">
-	<div class="section-body">
+	<div class="section-graphics">
+		<canvas id="grid3" width="250" height="250"></canvas>
+		<img src="res/emmyNoether.jpg"></img>
+		<p style="border-color: #4DAAD2;"></p>
+		<h2 class="labelNo" style="color: #4DAAD2"> 03.<br/><br/><h2>
+		<h2 class="label"> The <br/>Science <h2>
+		
+		<script> drawGrid("grid3", "#90E0E0", 12); </script>
+	</div>
+
+	<div class="section-body" style="margin-left: 45%;">
 	<h2> In Honor of Mathematician <br/> Amalie Emmy Noether </h2>
 	<p style="margin-top: 11px; margin-bottom: 30px">
 		NoetherTech is named as a homage to Amalie Emmy Noether, a 20th-century mathematician best known for her contributions to abstract algebra and the discovery of Noether’s Theorem. She has been praised as one of the most significant figures in mathematics by Albert Einstein, Jean Dieudonné, and Norbert Wiener, to name a few. 
 	</p>
-	<a class="button" style="background-color: #41EAD4"> LEARN MORE <!-- about what ---> </a>
+	<a class="button"> LEARN MORE <!-- about what ---> </a>
 	<p style="margin-bottom: 30px; padding-top: 11px;">
 		Noether’s theorem, initially a solution to special relativity in Einstein’s theory of general relativity, proved that all physical system symmetries of actions correspond to a conservational law. Now a fundamental tool in modern theoretical physics, this revolutionary theorem inspired and contributed to our technology.
 	</p>
-	<a class="button" style="background-color: #41EAD4"> LEARN MORE <!-- about what ---> </a>
+	<a class="button"> LEARN MORE <!-- about what ---> </a>
 	</div>
 </div>
 
