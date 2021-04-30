@@ -1,0 +1,220 @@
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+	
+	<style>
+	/* General */
+	body {
+		background-color: #011627;
+	}
+	* {
+		font: 48px Abel, sans-serif;
+		color: white;
+	}
+	p {
+		font: 18px Noto Sans, sans;
+	}
+	a.button {
+		font: 12px Noto Sans TC, sans;
+		background-color: #FB6678;
+		padding: 10px 42px;
+		border-radius: 42px;
+		color: #011627;
+	}
+	@media only screen and (max-width: 1000px) {
+		* {
+			font: 36px Abel, sans-serif;
+		}
+		/*p {
+			font: 18px Noto Sans, sans;
+		}
+		a.button {
+			font: 12px Noto Sans TC, sans;
+		}*/
+	}
+	
+	
+	/* Title */
+	#title {
+		transform: translate(0, -15%);
+		margin-bottom: 0;
+	}
+	#title img{
+		margin: 0;
+		width: 100%;
+		height: auto;
+	}
+	#title #titleTextContainer{
+		position: absolute;
+		top: 30%;
+		right: 10%;
+		width: 70%;
+	}
+	#titleTextContainer h1{
+		float: right;
+		font-size: 6vw;
+		width: 70%;
+		text-align: right;
+		text-shadow: 2px 2px black;
+		margin: 0;
+	}
+	#titleTextContainer p{
+		background-color: rgba(1, 22, 39, 0.65);
+		color: #FB6678;
+		margin: 0;
+		float: right;
+		font-size: 1.5vw;
+		text-align: center;
+	}
+	
+	/* Sections */
+	div.section {
+		margin: 60px 15%;
+	}
+	@media only screen and (max-width: 1000px) {
+		div.section {
+			margin: 60px 12%;
+		}
+	}
+	div.section-body h2{
+		margin-bottom: 0px;
+	}
+	
+	/*Card style*/
+	ul.cards_container{
+		display: flex;
+		list-style-type: none;
+		padding: 0;
+		flex-wrap: wrap;
+	}
+	li.card {
+		width: 31%;
+		margin: 1%;
+		float: left;
+	}
+	li.card img{
+		max-width: 60%;
+		height: auto;
+		margin: 9px 20%;
+	}
+	li.card h3{
+		font-size: 30px;
+		text-align: center;
+		margin: 0;
+	}
+	li.card p{
+		font-size: 16px;
+		text-align: center;
+		margin-top: 9px;
+	}
+	</style>
+</head>
+
+<!-- Page body -->
+<body>
+<div id="title">
+	<img id="titleImg", src="homepageTitle.jpg"> 
+	<div id="titleTextContainer">
+	<h1 id="titleTitle"> BREAKTHROUGH NEUROPSYCHIATRIC TECHNOLOGY </h1>
+	<p id="titleSubtext"> A NOVEL WAY TO TREAT NEUROLOGICAL DISORDERS </p>
+	</div>
+</div>
+
+<div id="about-us" class="section" style="margin-top: 0px">
+	<div style="float: left;">
+		<h2 style="line-height: 1; margin-top: 0px; text-align: center"> About Us </h2>
+		<a class="button"> LEARN MORE </a>
+	</div>
+	<div style="margin-left: 200px;"> 
+		<p style="margin-bottom: 0px;">NoetherTech is a neuro-optimization company that researches,
+		diagnoses, and treats neurological and psychiatric disorders.</p> 
+		
+		<p style="margin-top: 9px;">Brought by the same innovators behind the Newport Brain 
+		Research Laboratory (NBRL), Brain Treatment Center (BTC) and creators of the MRT and MeRT 
+		technologies currently used by WaveNeuro.</p>
+	</div>
+</div>
+
+<div id="technology" class="section">
+	<div class="section-body">
+	<h2> A Platform to Restore Brain Health </h2>
+	<p style="margin-bottom: 0px; margin-top: 11px;"> We analyze neural information and utilize our
+	Electromagnetic Brain Pulse (EMBP) neural modulation therapy to optimize brain health and 
+	restore functionality. </p>
+	
+	<p style="margin-top: 9px;  margin-bottom: 30px"> Our combined expertise in neuroscience, innovative machine learning
+	analysis, and cutting-edge use EMBP neuro-stimulation has actualized in our patented, 
+	personalized, and non-invasive neuromodulation treatment. </p>
+	
+	<a class="button"> LEARN MORE </a>
+	</div>
+	
+	<ul class="cards_container">
+		<!-- Icons -->
+		<li class="card"><div>
+			<img src="med-icon.png">
+		</div></li>
+		<li class="card"><div>
+			<img src="drug-icon.png">
+		</div></li>
+		<li class="card"><div>
+			<img src="drug-icon.png">
+		<!-- Text -->
+		</div></li>
+		<li class="card"><div>
+			<h3> Non-Invasive </h3>
+			<p>It is pain-free. Say hooray</p>
+		</div></li>
+		<li class="card"><div>
+			<h3> SMTHN ELSE </h3>
+			<p> HEY PUT SMTHN ELSE </p>
+		</div></li>
+		<li class="card"><div>
+			<h3> Drug Free </h3>
+			<p>Non-addictive</p>
+		</div></li>
+	</ul>
+</div>
+
+<div id="history" class="section">
+	<div class="section-body">
+	<h2> Why EMBP? </h2>
+	<p style="margin-bottom: 0px; margin-top: 11px;"> Brain-wave-guided transcranial magnetic 
+	stimulation treatment was discovered by Yi Jin, MD, through his academic research and 
+	clinical applications over the past 30 years. It has been developed in combination with 
+	his knowledge of the first principles of thermodynamics, and information processing of the 
+	brain, and his clinical experiences in psychiatry. </p>
+	
+	<p style="margin-top: 9px;  margin-bottom: 30px">According to his theory, cognition and its anomalies are 
+	epiphenomena of underlying survival strategies of the central nervous system. Abnormal 
+	behaviors are modeled as phenomena caused by deviations from the default state and subsequent
+	compensatory changes in the brain. Electromagnetic Brain Pulsing Treatment (EMBP) is a new, 
+	advanced and proprietary technology, developed and patented by NoetherTech. In essence, the 
+	treatment identifies the patient’s brain condition through quantitative analyses and delivers 
+	a customized, pulse-matching, electromagnetic stimulation to normalize the brain condition. </p>
+	<a class="button" style="background-color: #41EAD4"> LEARN MORE </a>
+	</div>
+</div>
+
+
+<div id="science" class="section">
+	<div class="section-body">
+	<h2> In Honor of Mathematician <br/> Amalie Emmy Noether </h2>
+	<p style="margin-top: 11px; margin-bottom: 30px">
+		NoetherTech is named as a homage to Amalie Emmy Noether, a 20th-century mathematician best known for her contributions to abstract algebra and the discovery of Noether’s Theorem. She has been praised as one of the most significant figures in mathematics by Albert Einstein, Jean Dieudonné, and Norbert Wiener, to name a few. 
+	</p>
+	<a class="button" style="background-color: #41EAD4"> LEARN MORE <!-- about what ---> </a>
+	<p style="margin-bottom: 30px; padding-top: 11px;">
+		Noether’s theorem, initially a solution to special relativity in Einstein’s theory of general relativity, proved that all physical system symmetries of actions correspond to a conservational law. Now a fundamental tool in modern theoretical physics, this revolutionary theorem inspired and contributed to our technology.
+	</p>
+	<a class="button" style="background-color: #41EAD4"> LEARN MORE <!-- about what ---> </a>
+	</div>
+</div>
+
+</body>
+</html>
