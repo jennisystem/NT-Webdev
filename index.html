@@ -25,6 +25,14 @@
 		* { font-size: 36px; }
 	}
 	
+	/* [---Footer---] */
+	footer {
+		background-color: #0D394C;
+		margin: 0;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	footer .body *{ text-align: center; color: white;}
 	
 	/* [---Title---] */
 	#title { padding: 0; }
@@ -140,6 +148,26 @@
 	}
 	li.card h3{ font: 30px Abel, serif; margin: 0; }
 	li.card p{ font: 18px Noto Sans, sans-serif; margin: 9px 0 0 0; }
+	
+	
+	#science {
+		margin: 0 5% 0 0;
+		box-shadow: -5px 10px 100px 5px rgba(144, 224, 224, 0.26);
+		border-radius: 0 10px 10px 0;
+		background-color: inherit;
+	}
+	.filler {
+		position: absolute;
+		height: 500px;
+		width: 100%;
+		background-color: #0D394C;
+		transform: translate(0, -500px);
+		z-index: -2;
+	}
+	footer {
+		margin-top: 120px;
+	}
+	
 	</style>
 </head>
 
@@ -268,6 +296,17 @@
 	<a class="button"> LEARN MORE <!-- about what ---> </a>
 	</div>
 </div>
+
+<footer>
+	<div class="filler"></div>
+	<div class="body">
+		<h2> Interested? </h2>
+		<p> We hope to meet each other <br/>very soon. </p>
+	</div>
+	
+	<div class="footer">
+	</div>
+</footer>
 
 </body>
 </html>
