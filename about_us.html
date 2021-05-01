@@ -1,0 +1,206 @@
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="grid.js"></script>
+	<style>
+	/* [---General---] */
+	body { background-color: white; margin: 0; }
+	* { font: 48px Abel, sans-serif; color: #02223B; }
+	p { font: 18px Noto Sans, sans; line-height: 150%;}
+	a.button {
+		font: 12px Noto Sans TC, sans;
+		font-weight: bold;
+		letter-spacing: 0.15em;
+		background-color: #90E0E0;
+		padding: 10px calc(42px - 2em) 10px 42px;
+		border-radius: 42px;
+		color: #011627;
+		text-align: center;
+		transition: 1s;
+	}
+	a.button:link { text-decoration: none; }
+	a.button:hover { text-decoration: none; opacity: 0.8;}
+	a.button::after{
+		content: "→";
+		padding: 0 1.5em 0 0.5em;
+		transition: 1s;
+	}
+	a.button:hover::after{
+		padding: 0 0 0 2em;
+	}
+	@media only screen and (max-width: 1000px) {
+		* { font-size: 36px; }
+	}
+	
+	/* [---Footer---] */
+	footer {
+		background-color: #0D394C;
+		margin-top: 60px;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	footer .body *{ text-align: center; color: white;}
+	
+	/* [---Title---] */
+	#title{
+		width: 100%;	height: 44vw;
+		background-color: #4DAAD2;
+		border-radius: 0px 10px 0px 100px;
+		padding: 0; 
+	}
+	#title #titleTextContainer{
+		position: absolute;
+		transform: translate(0, 114%);
+		left: 10%;
+		width: 35%;
+	}
+	#titleTextContainer h1{
+		float: left;	text-align: left;
+		margin: 0;
+		font: 6vw Abhaya Libre, serif;	color: white;
+	}
+	#titleTextContainer p{
+		//background-color: rgba(1, 22, 39, 0.65);
+		color: #C6E4D5;
+		margin: 0;
+		float: left;
+		font: 1.5vw Noto Sans TC, sans;
+		
+	}
+	
+	/* [---Sections---] */
+	div.section { padding: 60px 15%; }
+	@media only screen and (max-width: 1000px) {
+		div.section { padding: 60px 12%; }
+	}
+	div.section-body h2{ margin-bottom: 0px; }
+	/* Section Graphics */
+	.section-graphics {
+		margin-top: 60px;
+		position: relative;
+		float: left;
+		width: 40%;
+		padding-bottom: 45px;
+	}
+	.section-graphics *{ position: absolute; margin: 0; }
+	.section-graphics p{
+		margin-top: 10%;	margin-left: 1px;
+		border-top: 1px solid black;
+		display: inline-block;
+		height: 7px; 	width: 28%;
+		font-size: 0px;
+	}
+	.section-graphics.left p{ border-left: 1px solid black; left: 0; }
+	.section-graphics.right p{ border-right: 1px solid black; }
+	.section-graphics .label{ top: 20%; font: Abel, serif; font-size: calc(18px + .25vw); }
+	.section-graphics .labelNo{ top: 13%; font: Abel, sans-serif; font-size: calc(18px + .5vw);}
+	.section-graphics img{
+		position: relative;
+		top: 0;		left: 10%;
+		width: 75%;
+	}
+	.section-graphics canvas{	width: 35%; }
+	.section-graphics.left canvas{	margin-top: 85%; margin-left: 2%; }
+	.section-graphics.right canvas{ margin-top: 61%;}
+	.section-graphics.right { float: right; }
+	.section-graphics.right *{right: 0; text-align: right;}
+	.section-graphics.right img{ left: 90%; transform: translate(-100%, 0); }
+	
+	.section-body.right { margin-left: 45%; }
+	.section-body.left { margin-right: 45%; }
+	@media only screen and (max-width: 1000px) {
+		/* For full width graphics on mobile */
+		.section-graphics { width: 80%; }
+		.section-graphics.left {margin-left: 15%; margin-right: 5%;}
+		.section-graphics.right {margin-left: 5%; margin-right: 15%;}
+		.section-body {
+			padding-top: 60px;
+			clear: both; //For full width graphics on mobile
+		}/**/
+		.section-body.right{margin-left: 0; }
+		.section-body.left{ margin-right: 0; }
+		/* For wrapping text around graphics 
+		.section-graphics {	width: 60%;}
+		.section-body p{  letter-spacing: 0.02em; }/**/
+	}
+	</style>
+</head>
+
+<!-- Page body -->
+<body>
+<div id="title">
+	<div id="titleGraphics">
+	<!--video playsinline autoplay muted loop>
+		<source src="res/neuron1right.mov" type="video/mp4"/>
+	</video-->
+	</div>
+	
+	<div id="titleTextContainer">
+	<h1 id="titleTitle"> ABOUT US <br/> </h1>
+	<p id="titleSubtext"> OUR VISION IS TO ACCELERATE THE WORLD'S 
+	TECHNOLOGY IN NEUROSCIENCE AND HEAL THE BRAIN </p>
+	</div>
+</div>
+
+<div id="intro" class="section">
+	<div class="section-graphics right">
+		<!--canvas id="grid2" width="250" height="250"></canvas>
+		<img src="res/brainTopGray.jpg"></img>
+		<p style="border-color: #1F789D;"></p>
+		<h2 class="labelNo" style="color: #1F789D"> 02.<br/><br/><h2>
+		<h2 class="label"> Our <br/> History <h2>
+		
+		<script> drawGrid("grid2", "#1F789D", 12); </script-->
+	</div>
+	
+
+	<div class="section-body left">
+	<h2> What We Do </h2>
+	<p style="margin-bottom: 0px; margin-top: 11px;"> NoetherTech is a neuro-optimization company that 
+	researches, diagnoses, and treats neurological and psychiatric disorders. </p>
+	
+	<p style="margin-top: 9px;  margin-bottom: 30px"> Our patented process uses Electroencephalograms 
+	(EEG) to identify brain wave abnormalities and Electromagnetic Brain Pulse (EMBP) neromodulation 
+	treatment to alter nerve activity, thereby restoring and opimizing brain functionality. </p>
+	</div>
+</div>
+
+<div id="background" class="section">
+	<div class="section-graphics left" style="margin-top: 40px">
+		<!--canvas id="grid1" width="250" height="250" style="margin-top: 61%;"></canvas>
+		<img src="res/brainTopGray.jpg"></img>
+		<p style="border-color: #C6E4D5;"></p>
+		<h2 class="labelNo" style="color: #C6E4D5"> 01.<br/><br/><h2>
+		<h2 class="label"> Our <br/>Technology <h2>
+		
+		<script> drawGrid("grid1", "#C6E4D5", 12); </script-->
+	</div>
+	
+	<div class="section-body right">
+	<h2> Our Background </h2>
+	<p style="margin-bottom: 30px; margin-top: 11px;"> We are the  innovators behind the Newport Brain 
+	Research Laboratory (NBRL), Brain Treatment Center (BTC), and the creators of the MRT and MeRT 
+	technologies currently used by WaveNeuro. </p>
+	<a class="button" href="history.html"> LEARN MORE </a>
+	</div>
+</div>
+
+<footer>
+	<div class="filler"></div>
+	<div class="body">
+		<h2> Interested? </h2>
+		<p> We hope to meet each other <br/>very soon. </p>
+	</div>
+	
+	<div class="footer">
+	</div>
+</footer>
+
+</body>
+</html>

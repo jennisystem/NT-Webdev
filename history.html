@@ -1,0 +1,241 @@
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="grid.js"></script>
+	<style>
+	/* [---General---] */
+	body { background-color: white; margin: 0; }
+	* { font: 48px Abel, sans-serif; color: #02223B; }
+	p { font: 18px Noto Sans, sans; line-height: 150%;}
+	a.button {
+		font: 12px Noto Sans TC, sans;
+		font-weight: bold;
+		letter-spacing: 0.15em;
+		background-color: #90E0E0;
+		padding: 10px calc(42px - 2em) 10px 42px;
+		border-radius: 42px;
+		color: #011627;
+		text-align: center;
+		transition: 1s;
+	}
+	a.button:link { text-decoration: none; }
+	a.button:hover { text-decoration: none; opacity: 0.8;}
+	a.button::after{
+		content: "→";
+		padding: 0 1.5em 0 0.5em;
+		transition: 1s;
+	}
+	a.button:hover::after{
+		padding: 0 0 0 2em;
+	}
+	@media only screen and (max-width: 1000px) {
+		* { font-size: 36px; }
+	}
+	
+	/* [---Footer---] */
+	footer {
+		background-color: #0D394C;
+		margin-top: 60px;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	footer .body *{ text-align: center; color: white;}
+	
+	/* [---Title---] */
+	#title{
+		width: 100%;	height: 44vw;
+		background-color: #4DAAD2;
+		border-radius: 0px 10px 0px 100px;
+		padding: 0; 
+	}
+	#title #titleTextContainer{
+		position: absolute;
+		transform: translate(0, 74%);
+		left: 10%;
+		width: 70%;
+	}
+	#titleTextContainer h1{
+		float: left;	text-align: left;
+		margin: 0;
+		font: 6vw Abhaya Libre, serif;	color: white;
+	}
+	
+	/* [---Sections---] */
+	div.section { padding: 60px 15%; }
+	@media only screen and (max-width: 1000px) {
+		div.section { padding: 60px 12%; }
+	}
+	div.header { position: relative; }
+	p.gimmick-line{
+		position: absolute;
+		border-top: 3px solid #90E0E0;	border-left: 3px solid #90E0E0;
+		height: 10px; top: -30%;
+		left: -15%;	width: 15%;
+		font-size: 0px;
+	}
+	p.label {
+		position: absolute;
+		left: -15%;
+		top: 0;		transform: translate(0, -70%);
+		color: #90E0E0;		font: 22px Abel, sans-serif
+	}
+	
+	/* [---Timeline---] */
+	.timeline-body {
+		max-height: 75%;	overflow-y: auto;
+		/* IE and Edge */			/* Firefox */
+		-ms-overflow-style: none;  	scrollbar-width: none; 
+	}
+	.timeline-body::-webkit-scrollbar {display: none;}/* Chrome, Safari, Opera */
+	.timeline-body .vertical-line {
+		position: absolute; 	float:left;
+		height: 75%;	margin: 0 0 0 2%;
+		border-right:  4px solid #4DAAD2;
+	}
+	.timeline-body .timeline-entry h5{
+		position: relative; 	float:left;
+		margin: 0;
+		border-bottom:  4px solid #4DAAD2;
+		width: 8%;		height: 10px;
+	}
+	.timeline-body .timeline-entry h6{
+		position: relative; 	float:left;
+		margin: 0;
+		font: 20px Abel, sans-serif;	color: #90E0E0;
+		width: 7%;		text-align: center;
+	
+	}
+	.timeline-body .timeline-entry p{margin-left: 15%;}
+	
+	
+	</style>
+</head>
+
+<!-- Page body -->
+<body>
+<div id="title">
+	<div id="titleGraphics">
+	<!--video playsinline autoplay muted loop>
+		<source src="res/neuron1right.mov" type="video/mp4"/>
+	</video-->
+	</div>
+	
+	<div id="titleTextContainer">
+	<h1 id="titleTitle"> THE <br/> EVOLUTION OF <br/> OUR TECHNOLOGY </h1>
+	</div>
+</div>
+
+
+
+<div id="intro" class="section" style="padding-top: 120px; padding-bottom: 120px;">
+	<div class="header" style="float: left;">
+		<p class="gimmick-line"></p>
+		<p class="label"> 01. </p>
+		<h2 style="line-height: 1; margin: 0px 24px 8px 0px; text-align: center"> Who We Are </h2>
+	</div>
+	<div class="body"> 
+		<p style="margin-bottom: 0px; margin-top: 0px;"> We are the innovators behind the 
+		Newport Brain Research Laboratory (NBRL), Brain Treatment Center (BTC), and the 
+		creators of the MRT and MeRT technologies currently used by WaveNeuro.</p> 
+		
+		<p style="margin-top: 11px;"> Our interdisciplinary team of engineers, scientists, 
+		researchers, doctors, and computer scientists have deep experience in 
+		neurorestoration, the physical sciences, medcine, technology, hardware development 
+		and finance. </p>
+	</div>
+</div>
+
+<div id="timeline" class="section">
+	<div class="header" style="display: inline-block;">
+		<p class="gimmick-line"></p>
+		<p class="label"> 02. </p>
+		<h2 style="line-height: 1; margin: 0px 24px 8px 0px; text-align: center"> Why EMBP? </h2>
+	</div>
+	
+	<div class="timeline-body">
+		<p class="vertical-line"></p>
+		<div class="timeline-entry">
+			<h5></h5><h6>2005</h6>
+			<p>schiz publication following 2002 study <br/> following the FDA approval of 
+			Transcranial Magnetic Stimulation (TMS), Dr. Jin’s first protocol, Neuro-EEG 
+			Synchronization Therapy (NEST), became an offering to patients through his first 
+			company, NeoSync. </p>
+		</div>
+		
+		<div class="timeline-entry">
+			<h5></h5><h6>2009</h6>
+			<p>Magnetic EEG-guided Resonant Therapy (MeRT), using repetitive magnetic stimulation
+			synchronized to an individual’s harmonic relationship between the dominant brain rhythm 
+			and other organ systems, most notably, the heart, was developed by Dr Jin through the 
+			work of his Newport Brain Research Lab and brought to patients through a network of Brain 
+			Treatment Centers around the world. <br/> imp in cell communicatio how boody comm <br/>
+			Dr Jin and his First Principles Research Group are ready to release the most advanced protocol 
+			to date, Electromagnetic Brain Pulsing (EMBP). EMBP is a new, advanced, patented and 
+			proprietary technology. The essence of the treatment is identifying the patient’s brain 
+			condition through quantitative analyses and then delivering a customized, pulse-matching, 
+			electromagnetic stimulation to normalize the brain condition. EMBP is one of the noninvasive, 
+			physiological, treatment procedures delivered through the mechanism now referred to as 
+			“neural modulation.” </p>
+		</div>
+		
+		<div class="timeline-entry">
+			<h5></h5><h6>2012</h6>
+			<p>EMBP  . . . consists of three steps as it is delivered to a patient: (1) recording the 
+			patient’s EEG at rest, (2) analyzing the EEG data by comparing them with a normative database, 
+			using an Artificial Intelligence (AI) process, to identify a patient’s characteristic alpha 
+			pattern, and (3) generating an electromagnetic pulse sequence that is customized according 
+			to an individual patient’s alpha pattern with its unique frequency distribution probability. 
+			The treatment’s intent is to help restore the individual’s default brain state, rather than 
+			chasing the phenomenology of clinical symptoms. </p>
+		</div>
+		
+		<div class="timeline-entry">
+			<h5></h5><h6>2016</h6>
+			<p>Throughout the past 15 years . . . a growing body of literature following Dr Jin’s theory 
+			has been published, dozens of patents have been granted, and the principles within the theory 
+			have been adopted by many other research groups, manufacturers and clinics. In contrast to 
+			all of the existing technologies, EMBP has shown equal or higher efficacy, depending on 
+			clinical conditions, and a much lower rate of adverse effect, especially with regard to the 
+			triggering of seizure due to the nature of variable stimulus frequencies. </p>
+		</div>
+		
+		<div class="timeline-entry">
+			<h5></h5><h6>2020</h6>
+			<p>Today . . . the Brain Health Leadership Foundation, with its mission to take breakthrough 
+			neuroscience research to innovative patient-centered practice through raising public awareness, 
+			developing and delivering professional clinical education and technical training, funding 
+			trials, case series and studies, and offering scholarships for treatment is passionate in its 
+			support of the work of Dr Yi Jin.  In its efforts to create the very best vehicle for doing so, 
+			BHLF is honored to become a Special Purpose Initiative within Experience Education and join 
+			them for the coming 50-year journey of continued excellence. </p>
+		</div>
+	</div>
+	<div style="display: flex; justify-content: center; margin-top: 30px;">
+	<a class="button" style="width: 33%; margin-right: 5%;" href="our_technology.html"> LEARN MORE ABOUT THE TECHNOLOGY</a>
+	<a class="button" style="width: 33%;"> LEARN MORE ABOUT THE SCIENCE</a>
+	</div>
+	<div style="display: flex; justify-content: center; margin-top: 30px;">
+	<a class="button" style="width: 33%; margin-right: 5%;"> LEARN MORE ABOUT THE ISSUED PATENTS</a>
+	<a class="button" style="width: 33%;"> LEARN MORE ABOUT THE RESEARCH</a>
+	</div>
+</div>
+
+<footer>
+	<div class="filler"></div>
+	<div class="body">
+		<h2> Interested? </h2>
+		<p> We hope to meet each other <br/>very soon. </p>
+	</div>
+	
+	<div class="footer">
+	</div>
+</footer>
+
+</body>
+</html>
