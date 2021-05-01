@@ -28,7 +28,7 @@
 	/* [---Footer---] */
 	footer {
 		background-color: #0D394C;
-		margin: 0;
+		margin-top: 60px;
 		padding-top: 60px;
 		padding-bottom: 60px;
 	}
@@ -152,24 +152,28 @@
 	li.card h3{ font: 30px Abel, serif; margin: 0; }
 	li.card p{ font: 18px Noto Sans, sans-serif; margin: 9px 0 0 0; }
 	
+	@media only screen and (min-width: 1000px) {
+		#science {
+			margin: 0 5% 0 0;
+			box-shadow: -5px 10px 100px 5px rgba(144, 224, 224, 0.26);
+			border-radius: 0 10px 10px 0;
+			padding-bottom: 160px;
+			background-color: inherit;
+		}
+		.filler {
+			position: absolute;
+			height: 500px;
+			width: 100%;
+			background-color: #0D394C;
+			transform: translate(0, -500px);
+			z-index: -2;
+		}
+		footer {
+			margin-top: 120px;
+			padding-top: 0px;
+		}
+	}
 	
-	#science {
-		margin: 0 5% 0 0;
-		box-shadow: -5px 10px 100px 5px rgba(144, 224, 224, 0.26);
-		border-radius: 0 10px 10px 0;
-		background-color: inherit;
-	}
-	.filler {
-		position: absolute;
-		height: 500px;
-		width: 100%;
-		background-color: #0D394C;
-		transform: translate(0, -500px);
-		z-index: -2;
-	}
-	footer {
-		margin-top: 120px;
-	}
 	
 	</style>
 </head>
