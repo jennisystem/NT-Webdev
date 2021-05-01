@@ -17,9 +17,21 @@
 		font-weight: bold;
 		letter-spacing: 0.15em;
 		background-color: #90E0E0;
-		padding: 10px 42px;
+		padding: 10px calc(42px - 2em) 10px 42px;
 		border-radius: 42px;
 		color: #011627;
+		text-align: center;
+		transition: 1s;
+	}
+	a.button:link { text-decoration: none; }
+	a.button:hover { text-decoration: none; opacity: 0.8;}
+	a.button::after{
+		content: "→";
+		padding: 0 1.5em 0 0.5em;
+		transition: 1s;
+	}
+	a.button:hover::after{
+		padding: 0 0 0 2em;
 	}
 	@media only screen and (max-width: 1000px) {
 		* { font-size: 36px; }
@@ -173,8 +185,6 @@
 			padding-top: 0px;
 		}
 	}
-	
-	
 	</style>
 </head>
 
@@ -226,7 +236,7 @@
 	analysis, and cutting-edge use EMBP neuro-stimulation has actualized in our patented, 
 	personalized, and non-invasive neuromodulation treatment. </p>
 	
-	<a class="button"> LEARN MORE </a>
+	<a class="button" href="our_technology.html"> LEARN MORE </a>
 	</div>
 </div>
 <!--div class="cards_container_wrapper"-->

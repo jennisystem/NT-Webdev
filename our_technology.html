@@ -1,0 +1,248 @@
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap" rel="stylesheet">
+
+	<script src="grid.js"></script>
+	<style>
+	/* [---General---] */
+	body { background-color: white; margin: 0; }
+	* { font: 48px Abel, sans-serif; color: #02223B; }
+	p { font: 18px Noto Sans, sans; line-height: 150%;}
+	a.button {
+		font: 12px Noto Sans TC, sans;
+		font-weight: bold;
+		letter-spacing: 0.15em;
+		background-color: #90E0E0;
+		padding: 10px calc(42px - 2em) 10px 42px;
+		border-radius: 42px;
+		color: #011627;
+		text-align: center;
+		transition: 1s;
+	}
+	a.button:link { text-decoration: none; }
+	a.button:hover { text-decoration: none; opacity: 0.8;}
+	a.button::after{
+		content: "→";
+		padding: 0 1.5em 0 0.5em;
+		transition: 1s;
+	}
+	a.button:hover::after{
+		padding: 0 0 0 2em;
+	}
+	@media only screen and (max-width: 1000px) {
+		* { font-size: 36px; }
+	}
+	
+	/* [---Footer---] */
+	footer {
+		background-color: #0D394C;
+		margin-top: 60px;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	footer .body *{ text-align: center; color: white;}
+	
+	/* [---Title---] */
+	#title { padding: 0; }
+	#title img{
+		padding: 0;		margin: 0;
+		width: 100%;	height: auto;
+		overflow: hidden;
+	}
+	#title #titleTextContainer{
+		position: absolute;
+		transform: translate(0, -220%);
+		left: 10%;
+		width: 70%;
+	}
+	#titleTextContainer h1{
+		float: left;	text-align: left;
+		width: 70%;		margin: 0;
+		font: 6.6vw Abhaya Libre, serif;	color: white;
+		line-height: 1;
+	}
+	
+	/* [---Sections---] */
+	div.section { padding: 60px 15%; }
+	@media only screen and (max-width: 1000px) {
+		div.section { padding: 60px 12%; }
+	}
+	div.section-body h2{ margin-bottom: 0px; }
+	
+	/* Section Graphics */
+	.section-graphics {
+		margin-top: 60px;
+		position: relative;
+		float: left;
+		width: 41%;
+		padding-bottom: 45px;
+	}
+	.section-graphics.right { float: right; }
+	.section-graphics img{
+		position: relative;
+		top: 0;		left: 10%;
+		width: 75%;
+	}
+	
+	.section-body.right { margin-left: 45%; }
+	.section-body.left { margin-right: 45%; }
+	#intro .section-graphics { width: 45%; padding: 0 0 60px 0; transform: translate(-10%, 0);}
+	#pic1 img{ width: 100%; box-shadow: 10px 10px 80px 0px #ACC9BB80;}
+	#pic2 img{ position: relative; height: 33%; width: auto; margin-top: 2%; box-shadow: 10px 10px 80px 0px #ACC9BB80;}
+	#pic3 img{ position: absolute; height: 52%; width: auto; top:36.5%; left:73%; box-shadow: 10px 10px 80px 0px #ACC9BB80;}
+	#intro .section-body { margin-right: 48%;}
+	#process { background-color: #4DAAD2; }
+	#process * { color: white; }
+	#process .section-graphics{ width: 45%; }
+	#process .section-graphics img{ width: 89%; left:11%; }
+	#process .section-graphics canvas{ 
+		width: 35%; 
+		position: absolute; 
+		margin: 43% 0 0 0;
+	}
+	#process .section-body{ margin-left: 48%;}
+	@media only screen and (max-width: 1000px) {
+		.section-graphics { width: 80%;}
+		.section-graphics.left {margin-left: 9%; 	margin-right: 9%;}
+		.section-graphics.right {margin-left: 9%; 	margin-right: 9%;}
+		.section-body { padding-top: 60px; 	clear: both; }
+		.section-body.right{ margin-left: 0; }
+		.section-body.left{ margin-right: 0; }
+		
+		#intro .section-graphics { width: 100%;  padding-bottom: 0;}
+		#pic1 img{ width: 100%; margin-left: 10%;}
+		#pic2 img{ display: none }
+		#pic3 img{ display: none }
+		#intro .section-body { margin-right: 0;}
+		#process .section-graphics{ width: 80%; 	margin-left: 10%;}
+		#process .section-graphics img{ width: 89%; left:11%; }
+		#process .section-graphics canvas{ 
+			width:35%; 
+			position: absolute; 
+			margin: 43% 0 0 0;
+		}
+		#process .section-body{ margin: 0%; }
+	}
+	
+	</style>
+</head>
+
+<!-- Page body -->
+<body>
+<div id="title">
+	<img src="res/neuronStaticCropped.png"></img>
+	<div id="titleTextContainer">
+	<h1 id="titleTitle"> OUR TECHNOLOGY <br/> </h1>
+	</div>
+</div>
+
+<div id="intro" class="section" style="overflow: auto;">
+	<div class="section-graphics right">
+		<div id="pic1">
+			<img src="res/embpInterface.PNG"></img>
+		</div>
+		<div id="pic2">
+			<img src="res/tms.jpg"></img>
+		</div>
+		<div id="pic3">
+			<img src="res/electro-cap-back.jpg"></img>
+		</div>
+	</div>
+	
+	<div class="section-body left">
+	<h2> What is EMBP? </h2>
+	<p style="margin-bottom: 0px; margin-top: 11px;"> Electromagnetic Brain Pulse (EMBP) is a personalized,
+	non-pharmaceutical, and non-invasive neuromodulation treatment that alters nerve activity through the targeted
+	delivery of stimulus to specific neurological sites in the body in order to help restore and optimize brain
+	functionality. </p>
+	
+	<p style="margin-top: 9px;"> EMBP Treatment uses a suite of Class II medical devices,
+	including EEG, and Transcranial Magnetic Stimulation (TMS), to uniquely image electric activities in the brain,
+	identify areas in the brain that may not be functioning properly and, most importantly, treat the neurons in the
+	brain with the goal of restoring optimal neurological function using a non-invasive, unique advancement in
+	non-pharmaceutical neuromodulation. </p>
+	
+	<p style="margin-top: 9px;  margin-bottom: 30px"> EDeveloped based on the fundamental physical law of 
+	conservation and the stochastic nature of the nervous system, recent demonstrations of this novel technology
+	have proven EMBP to be an effective treatment for many neuropsychiatric disorders. EMBP has shown clinical 
+	improvements in patients with major depressive and anxiety disorders, ADHD, and SUD with comorbidity of 
+	mental illnesses. </p>
+	</div>
+</div>
+
+<div id="process" class="section" style="overflow: hidden;">
+	<div class="section-graphics left">
+		<canvas id="grid1" width="250" height="375"></canvas>
+		<img src="res/embpProcess.PNG"></img>
+		<script> drawGrid("grid1", "#C6E4D5", 12); </script>
+	</div>
+	
+	
+	<div class="section-body right">
+	<h2> The EMBP Process </h2>
+	<p style="margin-bottom: 0px; margin-top: 11px;"> First, an electroencephalogram (EEG) is conducted on a 
+	patient experiencing physiological and/or medical conditions in need of treatment. This records the subject’s
+	brain condition and characteristic activity patterns. </p>
+	
+	<p style="margin-top: 9px;"> Next, the raw EEG data is analyzed with a Variable Pulse Intervals (VPI) 
+	transform algorithm resulting in a unique patient EEG Variable Pulse Intervals signal. The pattern of the 
+	EEG signal is used to program the transistor-transitor logic (TTL) pulses, or other triggers to activate a 
+	transcranial magnetic stimulation (TMS) device with the similar variable pulse schedule. </p>
+	
+	<p style="margin-top: 9px;"> The personalized TMS is administered to the patient for a time sufficient to 
+	modulate brain activity, treating the observed anomalies from the EEG to utimately improve the physiological 
+	or clinical condition being treated. </p>
+	
+	<p style="margin-top: 9px;  margin-bottom: 30px"> In contrast to the typical method of focusing on clinical
+	symptoms or behaviors, EMBP focuses on the brain’s physical condition.</p>
+	</div>
+</div>
+
+
+<div id="more" class="section" style="overflow: hidden;">
+	<div class="section-graphics right" style="padding-bottom: 0;">
+		<video playsinline autoplay muted loop style="width: 100%;"> <source src="res/stemCellTechnology.mp4" type="video/mp4"/> </video>
+	</div>
+
+	<div class="section-body left">
+	<h2> More on EMBP </h2>
+	<p style="margin-bottom: 0px; margin-top: 11px;"> The development of EMBP technology is based on our prior 
+	research of the brain’s physiological nature in electrical oscillation, energy metabolism, and their 
+	relationships with cognitive functions and mental disorders. Photic driving and TMS studies are demonstrations 
+	that the brain’s electrical activities follow the physics law of symmetry and conservation. External repetitive 
+	stimulation near or away from the brain’s intrinsic pulse interval variation can effectively modulate its 
+	activities by enhancement or perturbation. In recent years, we have shown that TMS, targeted by using an 
+	evaluation of an individual’s EEG, can effectively treat neuropsychiatric disorders including major depressive 
+	disorders, anxiety and SUD and addiction. </p>
+	
+	<p style="margin-top: 9px;  margin-bottom: 30px"> In the past 15 years, a growing body of literature following 
+	this theory has been published, dozens of patents have been granted, and the principles within the theory have 
+	been adopted by many other research groups, manufacturers and clinics. In contrast to all of the existing 
+	technologies, EMBP has shown equal or higher efficacy, depending on clinical conditions, and a much lower rate 
+	of adverse effect, especially with regard to the triggering of seizure due to the nature of variable stimulus 
+	frequencies. </p>
+	</div>
+	
+	<div style="display: flex; justify-content: center; margin-top: 60px;">
+	<a class="button" style="margin-right: 5%;"> LEARN MORE ABOUT THE ISSUED PATENTS</a>
+	<a class="button"> LEARN MORE ABOUT THE RESEARCH</a>
+	</div>
+</div>
+
+<footer>
+	<div class="filler"></div>
+	<div class="body">
+		<h2> Interested? </h2>
+		<p> We hope to meet each other <br/>very soon. </p>
+	</div>
+	
+	<div class="footer">
+	</div>
+</footer>
+
+</body>
+</html>
