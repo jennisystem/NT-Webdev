@@ -106,16 +106,19 @@
 	.section-body.left { margin-right: 45%; }
 	@media only screen and (max-width: 1000px) {
 		#technology { padding-bottom: 120px; }
-		//.section-graphics { width: 100%; }	//For full width graphics on mobile
+		/* For full width graphics on mobile */
+		.section-graphics { width: 80%; }
+		.section-graphics.left {margin-left: 15%; margin-right: 5%;}
+		.section-graphics.right {margin-left: 5%; margin-right: 15%;}
 		.section-body {
 			padding-top: 60px;
-			//clear: both; //For full width graphics on mobile
-		}
+			clear: both; //For full width graphics on mobile
+		}/**/
 		.section-body.right{margin-left: 0; }
 		.section-body.left{ margin-right: 0; }
-		/* For wrapping text around graphics */
+		/* For wrapping text around graphics 
 		.section-graphics {	width: 60%;}
-		.section-body p{  letter-spacing: 0.02em; }
+		.section-body p{  letter-spacing: 0.02em; }/**/
 	}
 	
 	/* [---Card style---]*/
