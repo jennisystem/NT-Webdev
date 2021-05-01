@@ -36,7 +36,11 @@
 	}
 	@media only screen and (max-width: 1000px) {
 		* { font-size: 36px; }
+		a.button {
+			padding: 10px 1em 10px 1em;
+		}
 	}
+	
 	
 	/* [---Footer---] */
 	footer {
@@ -54,29 +58,16 @@
 		border-radius: 0px 10px 0px 100px;
 		padding: 0; 
 	}
-	#title video{
-		padding: 0;		margin: 0;
-		width: 100%;	height: auto;
-		overflow: hidden;
-	}
 	#title #titleTextContainer{
 		position: absolute;
-		transform: translate(0, 114%);
+		transform: translate(0, 74%);
 		left: 10%;
-		width: 35%;
+		width: 70%;
 	}
 	#titleTextContainer h1{
 		float: left;	text-align: left;
 		margin: 0;
 		font: 6vw Abhaya Libre, serif;	color: white;
-	}
-	#titleTextContainer p{
-		//background-color: rgba(1, 22, 39, 0.65);
-		color: #C6E4D5;
-		margin: 0;
-		float: left;
-		font: 1.5vw Noto Sans TC, sans;
-		
 	}
 	
 	/* [---Sections---] */
@@ -84,120 +75,19 @@
 	@media only screen and (max-width: 1000px) {
 		div.section { padding: 60px 12%; }
 	}
-	div.section-body h2{ margin-bottom: 0px; }
-	#technology *{ color: white; }
-	/* Section Graphics */
-	.section-graphics {
-		margin-top: 60px;
-		position: relative;
-		float: left;
-		width: 40%;
-		padding-bottom: 45px;
-	}
-	.section-graphics *{ position: absolute; margin: 0; }
-	.section-graphics p{
-		margin-top: 10%;	margin-left: 1px;
-		border-top: 1px solid black;
-		display: inline-block;
-		height: 7px; 	width: 28%;
+	div.header { position: relative; }
+	p.gimmick-line{
+		position: absolute;
+		border-top: 3px solid #90E0E0;	border-left: 3px solid #90E0E0;
+		height: 10px; top: -30%;
+		left: -10%;	width: 10%;
 		font-size: 0px;
 	}
-	.section-graphics.left p{ border-left: 1px solid black; left: 0; }
-	.section-graphics.right p{ border-right: 1px solid black; }
-	.section-graphics .label{ top: 20%; font: Abel, serif; font-size: calc(18px + .25vw); }
-	.section-graphics .labelNo{ top: 13%; font: Abel, sans-serif; font-size: calc(18px + .5vw);}
-	.section-graphics img{
-		position: relative;
-		top: 0;		left: 10%;
-		width: 75%;
-	}
-	.section-graphics canvas{	width: 35%; }
-	.section-graphics.left canvas{	margin-top: 85%; margin-left: 2%; }
-	.section-graphics.right canvas{ margin-top: 61%;}
-	.section-graphics.right { float: right; }
-	.section-graphics.right *{right: 0; text-align: right;}
-	.section-graphics.right img{ left: 90%; transform: translate(-100%, 0); }
-	
-	#about-us .body { 
-		clear:none; font: 
-		margin-left: 30%; margin-right: 2.5%;
-	}
-	#about-us .header {width: 30%; }
-	#technology { padding-bottom: 180px; }
-	.section-body.right { margin-left: 45%; }
-	.section-body.left { margin-right: 45%; }
-	@media only screen and (max-width: 1000px) {
-		#about-us .header { width: 100%; margin-bottom: 20px;}
-		#about-us .header h2 { margin-bottom: 12px; }
-		#about-us .body { clear: both; margin-left: 0; }
-		#technology { padding-bottom: 120px; }
-		/* For full width graphics on mobile */
-		.section-graphics { width: 80%; }
-		.section-graphics.left {margin-left: 15%; margin-right: 5%;}
-		.section-graphics.right {margin-left: 5%; margin-right: 15%;}
-		.section-body {
-			padding-top: 60px;
-			clear: both; //For full width graphics on mobile
-		}/**/
-		.section-body.right{margin-left: 0; }
-		.section-body.left{ margin-right: 0; }
-		/* For wrapping text around graphics 
-		.section-graphics {	width: 60%;}
-		.section-body p{  letter-spacing: 0.02em; }/**/
-	}
-	
-	/* [---Card style---]*/
-	ul.cards_container{
-		display: flex;		flex-wrap: wrap;
-		padding: 0;		margin: 0 0 -8% 0;
-		list-style-type: none;
-		width: 75%;
-		float: right;
-		transform: translate(0, -50%);
-		background-color: white;
-		box-shadow: -5px 10px 100px 5px rgba(144, 224, 224, 0.26);
-		border-radius: 10px 0 0 10px;
-	}
-	li.card {
-		width: 33.3%;
-		margin: 5% 0%;
-		padding: 0 5%;
-		float: left;
-		box-sizing: border-box;
-	}
-	li.card h3{ font: 30px Abel, serif; margin: 0; }
-	li.card p{ font: 18px Noto Sans, sans-serif; margin: 9px 0 0 0; }
-	@media only screen and (max-width: 1000px) {
-		ul.cards_container{
-			width: 100%;
-			float: none;
-			margin: 0 0 0 0;
-			transform: translate(0, 0);
-		}
-		li.card p { font-size: 2.75vw;}
-	}
-	
-	
-	@media only screen and (min-width: 1000px) {
-		#science {
-			margin: 0 5% 0 0;
-			box-shadow: -5px 10px 100px 5px rgba(144, 224, 224, 0.26);
-			border-radius: 0 10px 10px 0;
-			padding-bottom: 160px;
-			background-color: inherit;
-		}
-		.filler {
-			position: absolute;
-			height: 500px;
-			width: 100%;
-			background-color: #0D394C;
-			transform: translate(0, -500px);
-			z-index: -2;
-		}
-		footer {
-			margin-top: 120px;
-			padding-top: 0px;
-		}
+	p.label {
+		position: absolute;
+		left: -10%;
+		top: 0;		transform: translate(0, -70%);
+		color: #90E0E0;		font: 22px Abel, sans-serif
 	}
 	</style>
 </head>
@@ -212,123 +102,59 @@
 	</div>
 	
 	<div id="titleTextContainer">
-	<h1 id="titleTitle"> ABOUT US <br/> </h1>
-	<p id="titleSubtext"> OUR VISION IS TO ACCELERATE THE WORLD'S 
-	TECHNOLOGY IN NEUROSCIENCE AND HEAL THE BRAIN </p>
+	<h1 id="titleTitle"> THE <br/> SCIENCE BEHIND <br/> OUR TECHNOLOGY </h1>
 	</div>
 </div>
 
-<div id="about-us" class="section" style="padding-top: 120px; padding-bottom: 120px;">
-	<div class="header" style="float: left;">
-		<h2 style="line-height: 1; margin-top: 2px; text-align: center"> About Us </h2>
-		<div style="display: flex; justify-content: center;"><a class="button"> LEARN MORE </a></div>
+
+
+<div id="intro" class="section" style="padding-top: 120px; padding-bottom: 120px;">
+	<div class="header" style="display: inline-block">
+		<p class="gimmick-line"></p>
+		<p class="label"> 01. </p>
+		<h2 style="line-height: 1; margin: 0px 24px 8px 0px; text-align: center"> Amalie Emmy Noether </h2>
 	</div>
 	<div class="body"> 
-		<p style="margin-bottom: 0px; margin-top: 0px;">NoetherTech is a neuro-optimization company that researches,
-		diagnoses, and treats neurological and psychiatric disorders.</p> 
+		<p style="margin-bottom: 0px; margin-top: 0px;"> The name NoetherTech is an acknowledgement
+		and homage to one of the greatest mathematicians in history, Amalie Emmy Noether. She has 
+		been praised as the most important woman in the history of mathematics by Albert Einstein, 
+		Jean Dieudonné, and Norbert Wiener, to name a few. After she began her work as a professor, 
+		Noether made a multitude of contributions over her 27 years of professional work across many 
+		mathematical fields. She was especially remembered for her work on abstract algebra, a highly 
+		innovative field of 20th-century mathematics, that is still deeply studied to this day. </p> 
 		
-		<p style="margin-top: 11px;">Brought by the same innovators behind the Newport Brain 
-		Research Laboratory (NBRL), Brain Treatment Center (BTC) and creators of the MRT and MeRT 
-		technologies currently used by WaveNeuro.</p>
+		<p style="margin-top: 11px;"> In 1915, Noether was recruited to help solve an issue with 
+		Einstein's theory of general relativity. The resulting solution was named Noether's theorem, 
+		which states that conserved quantities can be found in symmetries in the laws of nature. 
+		Although this theory has become one of the fundamental tools in modern theoretical physics, 
+		it has also reshaped the way we approach many problems in the physical world. In particular, 
+		the inspiration behind much of the technology at NoetherTech can be traced back to, and 
+		credited to this particular piece of revolutionary work by Emmy Noether. </p>
 	</div>
 </div>
 
-<div id="technology" class="section" style="background-color: #4BA9D2; overflow: auto;">
-	<div class="section-graphics left" style="margin-top: 40px">
-		<canvas id="grid1" width="250" height="250" style="margin-top: 61%;"></canvas>
-		<img src="res/brainTopGray.jpg"></img>
-		<p style="border-color: #C6E4D5;"></p>
-		<h2 class="labelNo" style="color: #C6E4D5"> 01.<br/><br/><h2>
-		<h2 class="label"> Our <br/>Technology <h2>
+<div id="intro" class="section" style="padding-top: 120px; padding-bottom: 120px;">
+	<div class="header" style="display: inline-block">
+		<p class="gimmick-line"></p>
+		<p class="label"> 02. </p>
+		<h2 style="line-height: 1; margin: 0px 24px 8px 0px; text-align: center"> The Science Explained </h2>
+	</div>
+	<div class="body"> 
+		<p style="margin-bottom: 0px; margin-top: 0px;"> The name NoetherTech is an acknowledgement
+		and homage to one of the greatest mathematicians in history, Amalie Emmy Noether. She has 
+		been praised as the most important woman in the history of mathematics by Albert Einstein, 
+		Jean Dieudonné, and Norbert Wiener, to name a few. After she began her work as a professor, 
+		Noether made a multitude of contributions over her 27 years of professional work across many 
+		mathematical fields. She was especially remembered for her work on abstract algebra, a highly 
+		innovative field of 20th-century mathematics, that is still deeply studied to this day. </p> 
 		
-		<script> drawGrid("grid1", "#C6E4D5", 12); </script>
-	</div>
-	
-	<div class="section-body right">
-	<h2> A Platform to Restore Brain Health </h2>
-	<p style="margin-bottom: 0px; margin-top: 11px;"> We analyze neural information and utilize our
-	Electromagnetic Brain Pulse (EMBP) neural modulation therapy to optimize brain health and 
-	restore functionality. </p>
-	
-	<p style="margin-top: 9px;  margin-bottom: 30px"> Our combined expertise in neuroscience, innovative machine learning
-	analysis, and cutting-edge use EMBP neuro-stimulation has actualized in our patented, 
-	personalized, and non-invasive neuromodulation treatment. </p>
-	
-	<a class="button" href="our_technology.html"> LEARN MORE </a>
-	</div>
-</div>
-<!--div class="cards_container_wrapper"-->
-	<ul class="cards_container">
-		<li class="card" style="border-right: 1px solid #C6E4D5;"><div>
-			<h3> Non-Invasive </h3>
-			<p>EMBP is pain-free and non-invasive. It doesn’t involve surgery,
-			anesthesia, or sedation. </p>
-		</div></li>
-		<li class="card" style="border-right: 1px solid #C6E4D5;"><div>
-			<h3> Drug Free</h3>
-			<p>EMBP is a drug-free treatment that uses electromagnetic
-			pulses to retrain brain activity</p>
-		</div></li>
-		<li class="card"><div>
-			<h3> Non-Systemic </h3>
-			<p>Our treatment has no effects on other areas of your
-			body as antidepressants do.</p>
-		</div></li>
-	</ul>
-	<!--/div-->
-
-<div id="history" class="section" style="overflow: hidden;">
-	<div class="section-graphics right">
-		<canvas id="grid2" width="250" height="250"></canvas>
-		<img src="res/brainTopGray.jpg"></img>
-		<p style="border-color: #1F789D;"></p>
-		<h2 class="labelNo" style="color: #1F789D"> 02.<br/><br/><h2>
-		<h2 class="label"> Our <br/> History <h2>
-		
-		<script> drawGrid("grid2", "#1F789D", 12); </script>
-	</div>
-	
-	<div class="section-body left">
-	<h2> Why EMBP? </h2>
-	<p style="margin-bottom: 0px; margin-top: 11px;"> Brain-wave-guided transcranial magnetic 
-	stimulation treatment was discovered by Yi Jin, MD, through his academic research and 
-	clinical applications over the past 30 years. It has been developed in combination with 
-	his knowledge of the first principles of thermodynamics, and information processing of the 
-	brain, and his clinical experiences in psychiatry. </p>
-	
-	<p style="margin-top: 9px;  margin-bottom: 30px">According to his theory, cognition and its anomalies are 
-	epiphenomena of underlying survival strategies of the central nervous system. Abnormal 
-	behaviors are modeled as phenomena caused by deviations from the default state and subsequent
-	compensatory changes in the brain. Electromagnetic Brain Pulsing Treatment (EMBP) is a new, 
-	advanced and proprietary technology, developed and patented by NoetherTech. In essence, the 
-	treatment identifies the patient’s brain condition through quantitative analyses and delivers 
-	a customized, pulse-matching, electromagnetic stimulation to normalize the brain condition. </p>
-	<a class="button"> LEARN MORE </a>
-	</div>
-</div>
-
-
-<div id="science" class="section">
-	<div class="section-graphics left">
-		<canvas id="grid3" width="250" height="250"></canvas>
-		<img src="res/emmyNoether.jpg"></img>
-		<p style="border-color: #90E0E0;"></p>
-		<h2 class="labelNo" style="color: #90E0E0"> 03.<br/><br/><h2>
-		<h2 class="label"> The <br/>Science <h2>
-		
-		<script> drawGrid("grid3", "#90E0E0", 12); </script>
-	</div>
-
-	<div class="section-body right">
-	<h2> In Honor of Mathematician <br/> Amalie Emmy Noether </h2>
-	<p style="margin-top: 11px; margin-bottom: 30px">
-		NoetherTech is named as a homage to Amalie Emmy Noether, a 20th-century mathematician best known for her contributions to abstract algebra and the discovery of Noether’s Theorem. She has been praised as one of the most significant figures in mathematics by Albert Einstein, Jean Dieudonné, and Norbert Wiener, to name a few. 
-	</p>
-	<a class="button"> LEARN MORE <!-- about what ---> </a>
-	<p style="margin-bottom: 30px; padding-top: 11px;">
-		Noether’s theorem, initially a solution to special relativity in Einstein’s theory of general relativity, proved that all physical system symmetries of actions correspond to a conservational law. Now a fundamental tool in modern theoretical physics, this revolutionary theorem inspired and contributed to our technology.
-	</p>
-	<a class="button"> LEARN MORE <!-- about what ---> </a>
+		<p style="margin-top: 11px;"> In 1915, Noether was recruited to help solve an issue with 
+		Einstein's theory of general relativity. The resulting solution was named Noether's theorem, 
+		which states that conserved quantities can be found in symmetries in the laws of nature. 
+		Although this theory has become one of the fundamental tools in modern theoretical physics, 
+		it has also reshaped the way we approach many problems in the physical world. In particular, 
+		the inspiration behind much of the technology at NoetherTech can be traced back to, and 
+		credited to this particular piece of revolutionary work by Emmy Noether. </p>
 	</div>
 </div>
 
