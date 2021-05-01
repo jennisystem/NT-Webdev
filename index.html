@@ -114,10 +114,13 @@
 	.section-graphics.right *{right: 0; text-align: right;}
 	.section-graphics.right img{ left: 90%; transform: translate(-100%, 0); }
 	
+	#about-us .body { clear:none; margin-left: 200px; }
 	#technology { padding-bottom: 180px; }
 	.section-body.right { margin-left: 45%; }
 	.section-body.left { margin-right: 45%; }
 	@media only screen and (max-width: 1000px) {
+		#about-us .header { width: 100%; margin-bottom: 60px;}
+		#about-us .body { clear: both; margin-left: 0; }
 		#technology { padding-bottom: 120px; }
 		/* For full width graphics on mobile */
 		.section-graphics { width: 80%; }
@@ -146,15 +149,6 @@
 		box-shadow: -5px 10px 100px 5px rgba(144, 224, 224, 0.26);
 		border-radius: 10px 0 0 10px;
 	}
-	@media only screen and (max-width: 1000px) {
-		ul.cards_container{
-			width: 100%;
-			float: none;
-			margin: 0 0 0 0;
-			transform: translate(0, 0);
-		}
-	}
-	
 	li.card {
 		width: 33.3%;
 		margin: 5% 0%;
@@ -164,6 +158,16 @@
 	}
 	li.card h3{ font: 30px Abel, serif; margin: 0; }
 	li.card p{ font: 18px Noto Sans, sans-serif; margin: 9px 0 0 0; }
+	@media only screen and (max-width: 1000px) {
+		ul.cards_container{
+			width: 100%;
+			float: none;
+			margin: 0 0 0 0;
+			transform: translate(0, 0);
+		}
+		li.card p { font-size: 2.75vw;}
+	}
+	
 	
 	@media only screen and (min-width: 1000px) {
 		#science {
@@ -202,11 +206,11 @@
 </div>
 
 <div id="about-us" class="section" style="padding-top: 120px; padding-bottom: 120px;">
-	<div style="float: left;">
+	<div class="header" style="float: left;">
 		<h2 style="line-height: 1; margin-top: 2px; text-align: center"> About Us </h2>
-		<a class="button"> LEARN MORE </a>
+		<div style="display: flex; justify-content: center;"><a class="button"> LEARN MORE </a></div>
 	</div>
-	<div style="margin-left: 200px;"> 
+	<div class="body"> 
 		<p style="margin-bottom: 0px; margin-top: 0px;">NoetherTech is a neuro-optimization company that researches,
 		diagnoses, and treats neurological and psychiatric disorders.</p> 
 		
