@@ -9,18 +9,9 @@
 	<script src="grid.js"></script>
 	<style>
 	/* [---General---] */
-	body {
-		background-color: white; // #E5E5E5;
-		margin: 0;
-	}
-	* {
-		font: 48px Abel, sans-serif;
-		color: #02223B;
-	}
-	p {
-		font: 18px Noto Sans, sans;
-		line-height: 150%;
-	}
+	body { background-color: white; margin: 0; }
+	* { font: 48px Abel, sans-serif; color: #02223B; }
+	p { font: 18px Noto Sans, sans; line-height: 150%;}
 	a.button {
 		font: 12px Noto Sans TC, sans;
 		font-weight: bold;
@@ -31,27 +22,15 @@
 		color: #011627;
 	}
 	@media only screen and (max-width: 1000px) {
-		* {
-			font: 36px Abel, sans-serif;
-		}
-		/*p {
-			font: 18px Noto Sans, sans;
-		}
-		a.button {
-			font: 12px Noto Sans TC, sans;
-		}*/
+		* { font-size: 36px; }
 	}
 	
 	
 	/* [---Title---] */
-	#title {
-		padding: 0;
-	}
+	#title { padding: 0; }
 	#title video{
-		padding: 0;
-		margin: 0;
-		width: 100%;
-		height: auto;
+		padding: 0;		margin: 0;
+		width: 100%;	height: auto;
 		overflow: hidden;
 	}
 	#title #titleTextContainer{
@@ -61,12 +40,9 @@
 		width: 70%;
 	}
 	#titleTextContainer h1{
-		float: left;
-		font: 6vw Abhaya Libre, serif;
-		width: 70%;
-		text-align: left;
-		margin: 0;
-		color: white;
+		float: left;	text-align: left;
+		width: 70%;		margin: 0;
+		font: 6vw Abhaya Libre, serif;	color: white;
 	}
 	#titleTextContainer p{
 		//background-color: rgba(1, 22, 39, 0.65);
@@ -79,80 +55,68 @@
 	}
 	
 	/* [---Sections---] */
-	div.section {
-		padding: 60px 15%;
-	}
+	div.section { padding: 60px 15%; }
 	@media only screen and (max-width: 1000px) {
-		div.section {
-			padding: 60px 12%;
-		}
+		div.section { padding: 60px 12%; }
 	}
-	div.section-body h2{
-		margin-bottom: 0px;
-	}
-	#technology *{
-		color: white;
-	}
+	div.section-body h2{ margin-bottom: 0px; }
+	#technology *{ color: white; }
 	/* Section Graphics */
 	.section-graphics {
 		margin-top: 60px;
 		position: relative;
 		float: left;
 		width: 40%;
-		background-color: green;
+		padding-bottom: 45px;
 	}
-	.section-graphics *{
-		position: absolute;
-	}
+	.section-graphics *{ position: absolute; margin: 0; }
 	.section-graphics p{
-		margin-top: 10%;
-		margin-left: 1px;
-		left: 0;
-		border-left: 1px solid black;
+		margin-top: 10%;	margin-left: 1px;
 		border-top: 1px solid black;
 		display: inline-block;
-		height: 7px;
-		width: 28%;
+		height: 7px; 	width: 28%;
 		font-size: 0px;
 	}
-	.section-graphics .label{
-		margin: 20% 0 0 0;
-		font: 1.25vw Abel, serif;
-	}
-	.section-graphics .labelNo{
-		margin: 13% 0 0 0;
-		font: 1.5vw Abel, sans-serif;
-	}
+	.section-graphics.left p{ border-left: 1px solid black; left: 0; }
+	.section-graphics.right p{ border-right: 1px solid black; }
+	.section-graphics .label{ top: 20%; font: Abel, serif; font-size: calc(18px + .25vw); }
+	.section-graphics .labelNo{ top: 13%; font: Abel, sans-serif; font-size: calc(18px + .5vw);}
 	.section-graphics img{
-		top: 0;
-		left: 10%;
+		position: relative;
+		top: 0;		left: 10%;
 		width: 75%;
 	}
-	.section-graphics canvas{
-		margin-top: 85%;
-		margin-left: 2%;
-		width: 35%;
-	}
+	.section-graphics canvas{	width: 35%; }
+	.section-graphics.left canvas{	margin-top: 85%; margin-left: 2%; }
+	.section-graphics.right canvas{ margin-top: 61%;}
+	.section-graphics.right { float: right; }
+	.section-graphics.right *{right: 0; text-align: right;}
+	.section-graphics.right img{ left: 90%; transform: translate(-100%, 0); }
 	
-	#technology {
-		 padding-bottom: 240px;
-	}
-	
+	#technology { padding-bottom: 180px; }
+	.section-body.right { margin-left: 45%; }
+	.section-body.left { margin-right: 45%; }
 	@media only screen and (max-width: 1000px) {
-		#technology {
-			padding-bottom: 120px;
+		#technology { padding-bottom: 120px; }
+		//.section-graphics { width: 100%; }	//For full width graphics on mobile
+		.section-body {
+			padding-top: 60px;
+			//clear: both; //For full width graphics on mobile
 		}
+		.section-body.right{margin-left: 0; }
+		.section-body.left{ margin-right: 0; }
+		/* For wrapping text around graphics */
+		.section-graphics {	width: 60%;}
+		.section-body p{  letter-spacing: 0.02em; }
 	}
 	
 	/* [---Card style---]*/
 	ul.cards_container{
-		display: flex;
+		display: flex;		flex-wrap: wrap;
+		padding: 0;		margin: 0 0 -8% 0;
 		list-style-type: none;
-		padding: 0;
-		flex-wrap: wrap;
 		width: 75%;
 		float: right;
-		margin: 0 0 -8% 0;
 		transform: translate(0, -50%);
 		background-color: white;
 		box-shadow: -5px 10px 100px 5px rgba(144, 224, 224, 0.26);
@@ -174,14 +138,8 @@
 		float: left;
 		box-sizing: border-box;
 	}
-	li.card h3{
-		font: 30px Abel, serif;
-		margin: 0;
-	}
-	li.card p{
-		font: 18px Noto Sans, sans-serif;
-		margin: 9px 0 0 0;
-	}
+	li.card h3{ font: 30px Abel, serif; margin: 0; }
+	li.card p{ font: 18px Noto Sans, sans-serif; margin: 9px 0 0 0; }
 	</style>
 </head>
 
@@ -212,8 +170,8 @@
 	</div>
 </div>
 
-<div id="technology" class="section" style="background-color: #4BA9D2;">
-	<div class="section-graphics" style="margin-top: 40px">
+<div id="technology" class="section" style="background-color: #4BA9D2; overflow: auto;">
+	<div class="section-graphics left" style="margin-top: 40px">
 		<canvas id="grid1" width="250" height="250" style="margin-top: 61%;"></canvas>
 		<img src="res/brainTopGray.jpg"></img>
 		<p style="border-color: #C6E4D5;"></p>
@@ -223,7 +181,7 @@
 		<script> drawGrid("grid1", "#C6E4D5", 12); </script>
 	</div>
 	
-	<div class="section-body"  style="margin-left: 45%;">
+	<div class="section-body right">
 	<h2> A Platform to Restore Brain Health </h2>
 	<p style="margin-bottom: 0px; margin-top: 11px;"> We analyze neural information and utilize our
 	Electromagnetic Brain Pulse (EMBP) neural modulation therapy to optimize brain health and 
@@ -257,7 +215,17 @@
 	<!--/div-->
 
 <div id="history" class="section" style="overflow: hidden;">
-	<div class="section-body">
+	<div class="section-graphics right">
+		<canvas id="grid2" width="250" height="250"></canvas>
+		<img src="res/brainTopGray.jpg"></img>
+		<p style="border-color: #1F789D;"></p>
+		<h2 class="labelNo" style="color: #1F789D"> 02.<br/><br/><h2>
+		<h2 class="label"> Our <br/> History <h2>
+		
+		<script> drawGrid("grid2", "#1F789D", 12); </script>
+	</div>
+	
+	<div class="section-body left">
 	<h2> Why EMBP? </h2>
 	<p style="margin-bottom: 0px; margin-top: 11px;"> Brain-wave-guided transcranial magnetic 
 	stimulation treatment was discovered by Yi Jin, MD, through his academic research and 
@@ -278,7 +246,7 @@
 
 
 <div id="science" class="section">
-	<div class="section-graphics">
+	<div class="section-graphics left">
 		<canvas id="grid3" width="250" height="250"></canvas>
 		<img src="res/emmyNoether.jpg"></img>
 		<p style="border-color: #90E0E0;"></p>
@@ -288,7 +256,7 @@
 		<script> drawGrid("grid3", "#90E0E0", 12); </script>
 	</div>
 
-	<div class="section-body" style="margin-left: 45%;">
+	<div class="section-body right">
 	<h2> In Honor of Mathematician <br/> Amalie Emmy Noether </h2>
 	<p style="margin-top: 11px; margin-bottom: 30px">
 		NoetherTech is named as a homage to Amalie Emmy Noether, a 20th-century mathematician best known for her contributions to abstract algebra and the discovery of Noether’s Theorem. She has been praised as one of the most significant figures in mathematics by Albert Einstein, Jean Dieudonné, and Norbert Wiener, to name a few. 
