@@ -34,7 +34,7 @@
 	a.button:hover::after{
 		padding: 0 0 0 2em;
 	}
-	@media only screen and (max-width: 1000px) {
+	@media only screen and (orientation: portrait) {
 		* { font-size: 36px; }
 		a.button {
 			padding: 10px 1em 10px 1em;
@@ -89,6 +89,14 @@
 		top: 0;		transform: translate(0, -70%);
 		color: #90E0E0;		font: 22px Abel, sans-serif
 	}
+	
+	#intro .section-graphics { float:right; width:50%; position: relative; }
+	#intro .section-graphics canvas{ position: absolute; width: 15%; right:-1%; }
+	#intro .section-graphics img{ position: relative; width: 90%; margin: 5%; }
+	
+	@media only screen and (orientation: portrait){
+		#intro .section-graphics {width: 100%; margin-bottom: 60px;}
+	}
 	</style>
 </head>
 
@@ -108,7 +116,13 @@
 
 
 
-<div id="intro" class="section" style="padding-top: 120px; padding-bottom: 120px;">
+<div id="intro" class="section" style="padding-top: 120px; padding-bottom: 30px;">
+	<div class="section-graphics">
+		<canvas id="grid1" width="250" height="500"></canvas>
+		<img src="res/noetherChalkboard.png"></img>
+		<script> drawGrid("grid1", "#C6E4D5", 6); </script>
+	</div>
+	
 	<div class="header" style="display: inline-block">
 		<p class="gimmick-line"></p>
 		<p class="label"> 01. </p>
@@ -133,7 +147,7 @@
 	</div>
 </div>
 
-<div id="intro" class="section" style="padding-top: 120px; padding-bottom: 120px;">
+<div id="intro" class="section" style="padding-top: 30px; padding-bottom: 30px;">
 	<div class="header" style="display: inline-block">
 		<p class="gimmick-line"></p>
 		<p class="label"> 02. </p>
