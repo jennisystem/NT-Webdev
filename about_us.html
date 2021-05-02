@@ -34,7 +34,7 @@
 	a.button:hover::after{
 		padding: 0 0 0 2em;
 	}
-	@media only screen and (max-width: 1000px) {
+	@media only screen and (orientation: portrait) {
 		* { font-size: 36px; }
 	}
 	
@@ -53,6 +53,16 @@
 		background-color: #4DAAD2;
 		border-radius: 0px 10px 0px 100px;
 		padding: 0; 
+	}
+	#titleGraphics img{
+		position: absolute;
+		width: 40%;		right: 10%;
+		transform: translate(0, 75%);
+	}
+	#titleGraphics canvas{
+		position: absolute;
+		width: 18%;		right: 6.5%;
+		transform: translate(0, 155%);
 	}
 	#title #titleTextContainer{
 		position: absolute;
@@ -85,7 +95,7 @@
 		margin-top: 60px;
 		position: relative;
 		float: left;
-		width: 40%;
+		width: 35%;
 		padding-bottom: 45px;
 	}
 	.section-graphics *{ position: absolute; margin: 0; }
@@ -112,9 +122,9 @@
 	.section-graphics.right *{right: 0; text-align: right;}
 	.section-graphics.right img{ left: 90%; transform: translate(-100%, 0); }
 	
-	.section-body.right { margin-left: 45%; }
-	.section-body.left { margin-right: 45%; }
-	@media only screen and (max-width: 1000px) {
+	.section-body.right { margin-left: 40%; }
+	.section-body.left { margin-right: 40%; }
+	@media only screen and (orientation: portrait) {
 		/* For full width graphics on mobile */
 		.section-graphics { width: 80%; }
 		.section-graphics.left {margin-left: 15%; margin-right: 5%;}
@@ -139,6 +149,9 @@
 	<!--video playsinline autoplay muted loop>
 		<source src="res/neuron1right.mov" type="video/mp4"/>
 	</video-->
+		<canvas id="titleGrid" width="375" height="250" style=""></canvas>
+		<img src="res/brainTopGrayCropped.png"></img>
+		<script> drawGrid("titleGrid", "#C6E4D5", 18); </script>
 	</div>
 	
 	<div id="titleTextContainer">
@@ -169,12 +182,14 @@
 	(EEG) to identify brain wave abnormalities and Electromagnetic Brain Pulse (EMBP) neromodulation 
 	treatment to alter nerve activity, thereby restoring and opimizing brain functionality. </p>
 	</div>
+	<a class="button" href="our_technology.html"> LEARN MORE ABOUT THE TECHNOLOGY</a>
 </div>
 
 <div id="background" class="section">
 	<div class="section-graphics left" style="margin-top: 40px">
+		<img src="res/neuronBlackWhite.png"></img>
 		<!--canvas id="grid1" width="250" height="250" style="margin-top: 61%;"></canvas>
-		<img src="res/brainTopGray.jpg"></img>
+			//img was here
 		<p style="border-color: #C6E4D5;"></p>
 		<h2 class="labelNo" style="color: #C6E4D5"> 01.<br/><br/><h2>
 		<h2 class="label"> Our <br/>Technology <h2>
@@ -191,7 +206,7 @@
 	</div>
 </div>
 
-<footer>
+<footer style="padding-top: 250px;">
 	<div class="filler"></div>
 	<div class="body">
 		<h2> Interested? </h2>
