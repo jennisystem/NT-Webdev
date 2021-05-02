@@ -71,10 +71,10 @@
 	}
 	
 	/* [---Sections---] */
-	div.section { padding: 60px 15%; }
-	@media only screen and (max-width: 1000px) {
+	div.section { padding: 60px 10%; }
+	/*@media only screen and (orientation: portrait) {
 		div.section { padding: 60px 12%; }
-	}
+	}*/
 	div.header { position: relative; }
 	p.gimmick-line{
 		position: absolute;
@@ -97,15 +97,15 @@
 	
 	.textbox{
 		width: 30%;	padding: 0 0.25em;
-		border: 3px solid #4DAAD2;	border-radius: 10px;
+		border: 3px solid #4DAAD2;	border-radius: 20px;
 		box-sizing: border-box;
 	}
 	.textbox *{ font: 20px Noto Sans, sans-serif; color: #4DAAD2; }
 	#lawsOfTherm { float:left;	margin-right: 2.5% }
-	#quote1 {
-		float: right;	margin: 6px;
-		border-radius: 50px;
-	}
+	#lawsOfTherm h3 {text-align: center;}
+	#lawsOfTherm ol {padding-left: 1.2em;}
+	#lawsOfTherm li {margin-bottom: 0.5em;}
+	#quote1 { float: right;	margin: 6px; }
 	#quote1 * { text-align: center; }
 	
 	@media only screen and (orientation: portrait){
@@ -170,7 +170,7 @@
 		<h2 style="line-height: 1; margin: 0px 24px 8px 0px; text-align: center"> The Science Explained </h2>
 	</div>
 	<div class="body">
-		<div id="lawsOfTherm" class="textbox">
+		<div id="lawsOfTherm" class="textbox" style="margin-bottom: 0.5em;">
 			<h3> Laws of Thermodynamics </h3>
 			<ol>
 				<li> Total energy of any isolated system is constant </li>
@@ -239,10 +239,9 @@
 	<a class="button" style="width: 40%;" href="science.html"> LEARN MORE ABOUT THE SCIENCE</a>
 	</div>
 	
-	<div style="display: flex; justify-content: center; margin-top: 30px;">
-	<a class="button" style="width: 40%; margin-right: 5%;"> LEARN MORE ABOUT THE ISSUED PATENTS</a>
+	<!--div style="display: flex; justify-content: center; margin-top: 30px;">
 	<a class="button" style="width: 40%;" href="research.html"> LEARN MORE ABOUT THE RESEARCH</a>
-	</div>
+	</div-->
 </div>
 
 <footer>

@@ -6,6 +6,10 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!--Appear on scroll -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 	<script src="grid.js"></script>
 	<style>
@@ -71,10 +75,10 @@
 	}
 	
 	/* [---Sections---] */
-	div.section { padding: 60px 15%; }
-	@media only screen and (orientation: portrait) {
+	div.section { padding: 60px 10%; }
+	/*@media only screen and (orientation: portrait) {
 		div.section { padding: 60px 12%; }
-	}
+	}*/
 	div.header { position: relative; }
 	p.gimmick-line{
 		position: absolute;
@@ -91,11 +95,6 @@
 	}
 	
 	/* [---Timeline---] */
-	.timeline-body {
-		max-height: 75%;	overflow-y: auto;
-		/* IE and Edge */			/* Firefox */
-		-ms-overflow-style: none;  	scrollbar-width: none; 
-	}
 	.timeline-body::-webkit-scrollbar {display: none;}/* Chrome, Safari, Opera */
 	.timeline-body .vertical-line {
 		position: absolute; 	float:left;
@@ -103,7 +102,7 @@
 		border-right:  4px solid #4DAAD2;
 		z-index: -1;
 	}
-	.timeline-body .vertical-line-cover { position: relative; height: 1em; bottom: -3.5em; width: 100%; }
+	.timeline-body .vertical-line-cover { position: relative; height: 1em; bottom: -1em; width: 100%; }
 	.timeline-body .vertical-line-cover *{
 		position: absolute; 	float:left;
 		bottom: 2em;
@@ -114,6 +113,7 @@
 						rgba(255, 255, 255, 0), 
 						rgba(255, 255, 255, 1) 30%);
 	}
+	.timeline-body .timeline-entry {margin-bottom: 1em;}
 	.timeline-body .timeline-entry h5{
 		position: relative; 	float:left;
 		margin: 0;
@@ -130,7 +130,7 @@
 	}
 	.timeline-body .timeline-entry p{margin-left: calc(9% + 3em);}
 	
-	.timeline-wrapper {position: relative; margin: 60px 0;}
+	.timeline-wrapper {position: relative; margin: 60px 0 30px 0;}
 	#post-timeline {
 		position: absolute;
 		bottom: 0;
@@ -141,10 +141,6 @@
 		width    : 100%;
 		height   : 1em;
 		z-index: 2;
-	}
-	.padding {
-		position: relative; background: #90E0E0; 
-		margin-top: 2em; height: 1.5em;
 	}
 	</style>
 </head>
@@ -193,76 +189,71 @@
 	<div class="timeline-wrapper">
 	<div class="timeline-body">
 		<p class="vertical-line"></p>
-		<div class="timeline-entry">
+		<div class="timeline-entry" data-aos="fade-up">
 			<h5></h5><h6>2005</h6>
-			<p>schiz publication following 2002 study <br/> following the FDA approval of 
+			<p >schiz publication following 2002 study </p>
+		</div>
+		
+		<div class="timeline-entry" data-aos="fade-up">
+			<h5></h5><h6>2009</h6>
+			<p>following the FDA approval of 
 			Transcranial Magnetic Stimulation (TMS), Dr. Jin’s first protocol, Neuro-EEG 
 			Synchronization Therapy (NEST), became an offering to patients through his first 
 			company, NeoSync. </p>
 		</div>
 		
-		<div class="timeline-entry">
-			<h5></h5><h6>2009</h6>
+		<div class="timeline-entry" data-aos="fade-up">
+			<h5></h5><h6>2012</h6>
 			<p>Magnetic EEG-guided Resonant Therapy (MeRT), using repetitive magnetic stimulation
 			synchronized to an individual’s harmonic relationship between the dominant brain rhythm 
 			and other organ systems, most notably, the heart, was developed by Dr Jin through the 
 			work of his Newport Brain Research Lab and brought to patients through a network of Brain 
-			Treatment Centers around the world. <br/> imp in cell communicatio how boody comm <br/>
-			Dr Jin and his First Principles Research Group are ready to release the most advanced protocol 
-			to date, Electromagnetic Brain Pulsing (EMBP). EMBP is a new, advanced, patented and 
-			proprietary technology. The essence of the treatment is identifying the patient’s brain 
-			condition through quantitative analyses and then delivering a customized, pulse-matching, 
-			electromagnetic stimulation to normalize the brain condition. EMBP is one of the noninvasive, 
-			physiological, treatment procedures delivered through the mechanism now referred to as 
-			“neural modulation.” </p>
+			Treatment Centers around the world.</p>
 		</div>
 		
-		<div class="timeline-entry">
-			<h5></h5><h6>2012</h6>
-			<p>EMBP  . . . consists of three steps as it is delivered to a patient: (1) recording the 
-			patient’s EEG at rest, (2) analyzing the EEG data by comparing them with a normative database, 
-			using an Artificial Intelligence (AI) process, to identify a patient’s characteristic alpha 
-			pattern, and (3) generating an electromagnetic pulse sequence that is customized according 
-			to an individual patient’s alpha pattern with its unique frequency distribution probability. 
-			The treatment’s intent is to help restore the individual’s default brain state, rather than 
-			chasing the phenomenology of clinical symptoms. </p>
-		</div>
-		
-		<div class="timeline-entry">
+		<div class="timeline-entry" data-aos="fade-up">
 			<h5></h5><h6>2016</h6>
-			<p>Throughout the past 15 years . . . a growing body of literature following Dr Jin’s theory 
-			has been published, dozens of patents have been granted, and the principles within the theory 
-			have been adopted by many other research groups, manufacturers and clinics. In contrast to 
-			all of the existing technologies, EMBP has shown equal or higher efficacy, depending on 
-			clinical conditions, and a much lower rate of adverse effect, especially with regard to the 
-			triggering of seizure due to the nature of variable stimulus frequencies. </p>
+			<p> imp in cell communicatio how boody comm </p>
 		</div>
 		
-		<div class="timeline-entry">
+		<div class="timeline-entry" data-aos="fade-up">
 			<h5></h5><h6>2020</h6>
-			<p>Today . . . the Brain Health Leadership Foundation, with its mission to take breakthrough 
-			neuroscience research to innovative patient-centered practice through raising public awareness, 
-			developing and delivering professional clinical education and technical training, funding 
-			trials, case series and studies, and offering scholarships for treatment is passionate in its 
-			support of the work of Dr Yi Jin.  In its efforts to create the very best vehicle for doing so, 
-			BHLF is honored to become a Special Purpose Initiative within Experience Education and join 
-			them for the coming 50-year journey of continued excellence. </p>
+			<p> The largest breakthrough to date, Electromagnetic Brain Pulsing (EMBP), is developed 
+			and patented. EMBP treatment identifies the patient’s brain condition through quantitative 
+			analyses and delivers a customized, pulse-matching, electromagnetic stimulation to normalize 
+			the brain condition. EMBP is one of the noninvasive, physiological, treatment procedures 
+			delivered through the mechanism now referred to as “neural modulation.”  </p>
+			
+			<p> EMBP consists of three steps as it is delivered to a patient: (1) recording the patient’s 
+			EEG at rest, (2) analyzing the EEG data by comparing them with a normative database, using an 
+			Artificial Intelligence (AI) process, to identify a patient’s characteristic alpha pattern, 
+			and (3) generating an electromagnetic pulse sequence that is customized according to an 
+			individual patient’s alpha pattern with its unique frequency distribution probability. The 
+			treatment’s intent is to help restore the individual’s default brain state, rather than 
+			chasing the phenomenology of clinical symptoms. </p>
+			
+			<p>Throughout the past 15 years, a growing body of literature following Dr Jin’s theory has 
+			been published, dozens of patents have been granted, and the principles within the theory have 
+			been adopted by many other research groups, manufacturers and clinics. In contrast to all of 
+			the existing technologies, EMBP has shown equal or higher efficacy, depending on clinical 
+			conditions, and a much lower rate of adverse effect, especially with regard to the triggering 
+			of seizure due to the nature of variable stimulus frequencies. </p> 
+			
 		</div>
 		<div class="vertical-line-cover"><p></p></div>
-		<div class="padding"><p>&nbsp;</p></div>
 	</div>
-	<div id="post-timeline"></div>
+	<!--div id="post-timeline"></div-->
 	</div>
 	
 	
-	<div style="display: flex; justify-content: center; margin-top: 30px;">
+	<div style="display: flex; justify-content: center; margin-top: 0px;">
 	<a class="button" style="width: 40%; margin-right: 5%;" href="our_technology.html"> LEARN MORE ABOUT THE TECHNOLOGY</a>
 	<a class="button" style="width: 40%;" href="science.html"> LEARN MORE ABOUT THE SCIENCE</a>
 	</div>
-	<div style="display: flex; justify-content: center; margin-top: 30px;">
-	<a class="button" style="width: 40%; margin-right: 5%;"> LEARN MORE ABOUT THE ISSUED PATENTS</a>
+	
+	<!--div style="display: flex; justify-content: center; margin-top: 30px;">
 	<a class="button" style="width: 40%;" href="research.html"> LEARN MORE ABOUT THE RESEARCH</a>
-	</div>
+	</div-->
 </div>
 
 <footer>
@@ -276,5 +267,8 @@
 	</div>
 </footer>
 
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
