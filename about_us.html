@@ -99,45 +99,27 @@
 		padding-bottom: 45px;
 	}
 	.section-graphics *{ position: absolute; margin: 0; }
-	.section-graphics p{
-		margin-top: 10%;	margin-left: 1px;
-		border-top: 1px solid black;
-		display: inline-block;
-		height: 7px; 	width: 28%;
-		font-size: 0px;
-	}
-	.section-graphics.left p{ border-left: 1px solid black; left: 0; }
-	.section-graphics.right p{ border-right: 1px solid black; }
-	.section-graphics .label{ top: 20%; font: Abel, serif; font-size: calc(18px + .25vw); }
-	.section-graphics .labelNo{ top: 13%; font: Abel, sans-serif; font-size: calc(18px + .5vw);}
-	.section-graphics img{
-		position: relative;
-		top: 0;		left: 10%;
-		width: 75%;
-	}
-	.section-graphics canvas{	width: 35%; }
-	.section-graphics.left canvas{	margin-top: 85%; margin-left: 2%; }
-	.section-graphics.right canvas{ margin-top: 61%;}
 	.section-graphics.right { float: right; }
 	.section-graphics.right *{right: 0; text-align: right;}
-	.section-graphics.right img{ left: 90%; transform: translate(-100%, 0); }
 	
 	.section-body.right { margin-left: 40%; }
 	.section-body.left { margin-right: 40%; }
+	#background .section-graphics img{ position: relative; width:100%; height:auto; left: 0; }
+	
+	footer { padding-top: 250px; }
+	
 	@media only screen and (orientation: portrait) {
-		/* For full width graphics on mobile */
-		.section-graphics { width: 80%; }
-		.section-graphics.left {margin-left: 15%; margin-right: 5%;}
-		.section-graphics.right {margin-left: 5%; margin-right: 15%;}
+		.section-graphics { width: 80%; margin: 0 10%;}
 		.section-body {
-			padding-top: 60px;
-			clear: both; //For full width graphics on mobile
-		}/**/
+			margin-top: 0px;
+			padding-top: 30px;
+			clear: both;
+		}
 		.section-body.right{margin-left: 0; }
 		.section-body.left{ margin-right: 0; }
-		/* For wrapping text around graphics 
-		.section-graphics {	width: 60%;}
-		.section-body p{  letter-spacing: 0.02em; }/**/
+		#background .section-graphics img{ width:80%; left: 10%;}
+		
+		footer {padding-top: 60px;}
 	}
 	</style>
 </head>
@@ -186,7 +168,7 @@
 </div>
 
 <div id="background" class="section">
-	<div class="section-graphics left" style="margin-top: 40px">
+	<div class="section-graphics left" style="margin-top: 40px;">
 		<img src="res/neuronBlackWhite.png"></img>
 		<!--canvas id="grid1" width="250" height="250" style="margin-top: 61%;"></canvas>
 			//img was here
@@ -206,7 +188,7 @@
 	</div>
 </div>
 
-<footer style="padding-top: 250px;">
+<footer>
 	<div class="filler"></div>
 	<div class="body">
 		<h2> Interested? </h2>

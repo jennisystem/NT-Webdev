@@ -89,13 +89,29 @@
 		top: 0;		transform: translate(0, -70%);
 		color: #90E0E0;		font: 22px Abel, sans-serif
 	}
+	div.header { margin-bottom: 18px; }
 	
 	#intro .section-graphics { float:right; width:50%; position: relative; }
 	#intro .section-graphics canvas{ position: absolute; width: 15%; right:-1%; }
 	#intro .section-graphics img{ position: relative; width: 90%; margin: 5%; }
 	
+	.textbox{
+		width: 30%;	padding: 0 0.25em;
+		border: 3px solid #4DAAD2;	border-radius: 10px;
+		box-sizing: border-box;
+	}
+	.textbox *{ font: 20px Noto Sans, sans-serif; color: #4DAAD2; }
+	#lawsOfTherm { float:left;	margin-right: 2.5% }
+	#quote1 {
+		float: right;	margin: 6px;
+		border-radius: 50px;
+	}
+	#quote1 * { text-align: center; }
+	
 	@media only screen and (orientation: portrait){
 		#intro .section-graphics {width: 100%; margin-bottom: 60px;}
+		.textbox{ float: none; width: 100%; margin-bottom: 30px; }
+		#quote1 { margin-bottom: 30px; }
 	}
 	</style>
 </head>
@@ -153,22 +169,79 @@
 		<p class="label"> 02. </p>
 		<h2 style="line-height: 1; margin: 0px 24px 8px 0px; text-align: center"> The Science Explained </h2>
 	</div>
-	<div class="body"> 
-		<p style="margin-bottom: 0px; margin-top: 0px;"> The name NoetherTech is an acknowledgement
-		and homage to one of the greatest mathematicians in history, Amalie Emmy Noether. She has 
-		been praised as the most important woman in the history of mathematics by Albert Einstein, 
-		Jean Dieudonné, and Norbert Wiener, to name a few. After she began her work as a professor, 
-		Noether made a multitude of contributions over her 27 years of professional work across many 
-		mathematical fields. She was especially remembered for her work on abstract algebra, a highly 
-		innovative field of 20th-century mathematics, that is still deeply studied to this day. </p> 
+	<div class="body">
+		<div id="lawsOfTherm" class="textbox">
+			<h3> Laws of Thermodynamics </h3>
+			<ol>
+				<li> Total energy of any isolated system is constant </li>
+				<li> The entropy of any isolated system always increases </li>
+				<li> Entropy of a system approaches a constant value as the 
+				temperature approaches absolute zero</li>
+			</ol>
+		</div>
 		
-		<p style="margin-top: 11px;"> In 1915, Noether was recruited to help solve an issue with 
-		Einstein's theory of general relativity. The resulting solution was named Noether's theorem, 
-		which states that conserved quantities can be found in symmetries in the laws of nature. 
-		Although this theory has become one of the fundamental tools in modern theoretical physics, 
-		it has also reshaped the way we approach many problems in the physical world. In particular, 
-		the inspiration behind much of the technology at NoetherTech can be traced back to, and 
-		credited to this particular piece of revolutionary work by Emmy Noether. </p>
+		<p style="margin-bottom: 0px; margin-top: 0px;"> NoetherTech's technology was developed based on 
+		the fundamental principles of physics in laws of symmetry and conservation, thermodynamics, 
+		information theory, and understanding of neural default states and their roles in neural physiology. 
+		Our EMBP treatment model is developed based on the theory that the brain can be modeled as an open 
+		thermodynamic system with dissipative structure. The priciple that guides the coordinated neuronal 
+		connection and behavior is the minimal entropy law described in dissipative thermodynamic theory. 
+		The massive synaptic connections effectively reduce the translational and rotational degrees of 
+		freedom of all neurons (vibrational degrees of freedom are negligible at body temperature), and the 
+		coherent neuronal firing resembles formation of translational symmetry. The former strategy decreases 
+		the total level of kinetic energy, and the latter reduces energy consumption through conservation to 
+		increase the stability in the brain as a whole system. </p> 
+		
+		<p style="margin-top: 11px;"> The brain, and many other biological systems, is an open thermodynamic 
+		system that takes matter and free energy from the environment to form order within the system and 
+		dissipate entropy outward to the environment. It is constrained by a fixed inflow of free energy in 
+		the form of chemical nourishment and information from the environment. The internal spontaneous process 
+		may be described as a steady state of entropy production. </p>
+		
+		
+		<div id="quote1" class="textbox">
+			<h3> Biological systems, including the brain, must follow the first principles of physics </h3>
+		</div>
+		
+		<p style="margin-top: 11px;"> A neural system, for example, will not violate the law to spontaneously 
+		increase its energy metabolism to risk its stability. Quite the opposite, the default state of the brain 
+		has been recently found to be in the lowest energy state with rhythmic electric oscillation. In certain 
+		pathological conditions, such as stroke and concussion, the brain would turn itself into even lower 
+		frequency activity to conserve energy regardless as to how much cognitive or sensory motor functions 
+		would be affected. In other words, our culturally defined brain functions are not necessarily in the 
+		best interest of the brain. Our biological brain function is primarily concerned with survival. </p>
+		
+		
+		<p style="margin-top: 11px;"> According to this model, cognitive functions can be described as 
+		epiphenomena of the brain’s strategies to maintain stability. Structure damage or change in symmetric 
+		neuronal firing alters the states of energy; levels of deviation from the norm may result in various 
+		changes in behaviors or other symptoms. In this limited sense, there are much fewer brain energy 
+		states tan phenomenological measures of symptoms. EMBP is designed to evaluated and normalize 
+		deviation of the brain state to help improve the slinical symptoms. The treatment protocol consists of 
+		two components: an electroencephalography (EEG_ recording to evaluate the brain state, and an 
+		individualized transcranial magnetic stimulation (TMS) treatment guided by the EEG to normalize that 
+		state. </p>
+		
+		
+		<p style="margin-top: 11px;"> Furthermore, the brain's oscillatory default state reveals obedience of 
+		another physical law - conservation in symmetry. Energy must be conserved in an oscillation invariant 
+		over time. The more symmetrical the EEG oscillation (greater frequency selectivity) is, the lower the 
+		brain metabolic rate it has. In addition, the frequency selectivity of EEG (low energy measure) has 
+		been found to be predictive for subject's cognitive performance. We thus speculate that culturally 
+		accepted cognitive functions are likely to be epiphenomena of the brain's survival strategy. Dealing 
+		with mental conditions must consider the brain's default "interests." </p>
+	</div>
+</div>
+
+<div class="section">
+	<div style="display: flex; justify-content: center; margin-top: 30px;">
+	<a class="button" style="width: 40%; margin-right: 5%;" href="our_technology.html"> LEARN MORE ABOUT THE TECHNOLOGY</a>
+	<a class="button" style="width: 40%;" href="science.html"> LEARN MORE ABOUT THE SCIENCE</a>
+	</div>
+	
+	<div style="display: flex; justify-content: center; margin-top: 30px;">
+	<a class="button" style="width: 40%; margin-right: 5%;"> LEARN MORE ABOUT THE ISSUED PATENTS</a>
+	<a class="button" style="width: 40%;" href="research.html"> LEARN MORE ABOUT THE RESEARCH</a>
 	</div>
 </div>
 

@@ -48,154 +48,115 @@
 	footer .body *{ text-align: center; color: white;}
 	
 	/* [---Title---] */
-	#title{
-		width: 100%;	height: 44vw;
-		background-color: #4DAAD2;
-		border-radius: 0px 10px 0px 100px;
-		padding: 0; 
-	}
-	#title video{
+	#title { padding: 0; }
+	#title img{
 		padding: 0;		margin: 0;
 		width: 100%;	height: auto;
 		overflow: hidden;
 	}
 	#title #titleTextContainer{
 		position: absolute;
-		transform: translate(0, 114%);
+		transform: translate(0, -150%);
 		left: 10%;
-		width: 35%;
+		width: 70%;
 	}
 	#titleTextContainer h1{
 		float: left;	text-align: left;
-		margin: 0;
+		width: 70%;		margin: 0;
 		font: 6vw Abhaya Libre, serif;	color: white;
+		line-height: 1;
 	}
-	#titleTextContainer p{
-		//background-color: rgba(1, 22, 39, 0.65);
-		color: #C6E4D5;
-		margin: 0;
-		float: left;
-		font: 1.5vw Noto Sans TC, sans;
-		
+	
+	/*Card style*/
+	ul.cards{
+		display: flex;		flex-wrap: wrap;
+		list-style-type: none;	padding: 0;
+		margin-left: -9%; margin-right: -9%;
 	}
+	.cards li {
+		width: 30%;		margin: 1%;
+		float: left;	padding: 0.5%;
+	}
+	.cards li div{
+		display: flex;
+		flex-direction: column;
+	}
+	.cards li * { font: 22px Noto Sans, sans-serif; margin: 9px 0; }
+	.cards .graphics { position: relative; }
+	.cards li canvas {
+		position: absolute;	left: 11%;
+		width: 60%;			z-index: 1;
+	}
+	.cards li img{
+		max-width: 60%;
+		height: auto;
+		margin: 11% 0 0 0;
+		z-index: 2;
+	}
+	.cards li h3{ font: 30px Abel, sans-serif; color: #4DAAD2; }
+	.cards li h4{ font-weight: 600; }
+	.cards li h5::before{ content: "Why is this important? "; font-weight: 600; }
+	.cards li p{
+		font-size: 16px;
+		text-align: center;
+		margin-top: 9px;
+	}
+	
 	
 	/* [---Sections---] */
 	div.section { padding: 60px 15%; }
 	@media only screen and (orientation: portrait) {
 		div.section { padding: 60px 12%; }
 	}
-	div.section-body h2{ margin-bottom: 0px; }
-	#technology *{ color: white; }
-	/* Section Graphics */
-	.section-graphics {
-		margin-top: 60px;
-		position: relative;
-		float: left;
-		width: 40%;
-		padding-bottom: 45px;
+	div.header {
+		display: inline-block; 	position: relative;
+		left: 50%;	transform: translate(-50%, 0);
+		margin-top: 30px;
 	}
-	.section-graphics *{ position: absolute; margin: 0; }
-	.section-graphics p{
-		margin-top: 10%;	margin-left: 1px;
-		border-top: 1px solid black;
-		display: inline-block;
-		height: 7px; 	width: 28%;
-		font-size: 0px;
+	div.header h2 {
+		 text-align: center;
+		 line-height: 1; 	margin: 0px 0px 8px 0px;
 	}
-	.section-graphics.left p{ border-left: 1px solid black; left: 0; }
-	.section-graphics.right p{ border-right: 1px solid black; }
-	.section-graphics .label{ top: 20%; font: Abel, serif; font-size: calc(18px + .25vw); }
-	.section-graphics .labelNo{ top: 13%; font: Abel, sans-serif; font-size: calc(18px + .5vw);}
-	.section-graphics img{
-		position: relative;
-		top: 0;		left: 10%;
-		width: 75%;
+	p.gimmick-line{
+		position: absolute;
+		border-top: 3px solid #4DAAD2;	border-left: 3px solid #4DAAD2;
+		font-size: 22px;
+		height: 7px; 	top: 0;		transform: translate(0, -350%);
+		left: -2em;		width: 2em;
 	}
-	.section-graphics canvas{	width: 35%; }
-	.section-graphics.left canvas{	margin-top: 85%; margin-left: 2%; }
-	.section-graphics.right canvas{ margin-top: 61%;}
-	.section-graphics.right { float: right; }
-	.section-graphics.right *{right: 0; text-align: right;}
-	.section-graphics.right img{ left: 90%; transform: translate(-100%, 0); }
+	p.label {
+		position: absolute;
+		left: -2em;
+		top: 0;		transform: translate(0, -70%);
+		color: #4DAAD2;		font: 22px Abel, sans-serif
+	}
 	
-	#about-us .body { 
-		clear:none; font: 
-		margin-left: 30%; margin-right: 2.5%;
+	#in-page-nav .body {width: 45%; float:right;}
+	#in-page-nav * { color: #1F789D; font: 24px Abel, sans-serif; }
+	#in-page-nav ol { margin: 0; }
+	#in-page-nav h3 { 
+		margin: 0 0 -1em -0.5em; 
+		padding: 0.5em 0 1em 0.5em;
+		border-left: 2px solid #FB6678;
 	}
-	#about-us .header {width: 30%; }
-	#technology { padding-bottom: 180px; }
-	.section-body.right { margin-left: 45%; }
-	.section-body.left { margin-right: 45%; }
+	#in-page-nav a:link{ text-decoration: none; }
+	#in-page-nav a:visited{ text-decoration: none; }
+	#in-page-nav a:hover{
+		font-weight: 600;
+	}
+	.toc { float: left; }
+	
+	#mert * {color: white;}
+	#mert p.gimmick-line{ border-top: 3px solid #90E0E0;	border-left: 3px solid #90E0E0;	}
+	#mert p.label { color: #90E0E0; }
+	#mert h3 {color: #90E0E0;}
+	
+	
 	@media only screen and (orientation: portrait) {
-		#about-us .header { width: 100%; margin-bottom: 20px;}
-		#about-us .header h2 { margin-bottom: 12px; }
-		#about-us .body { clear: both; margin-left: 0; }
-		#technology { padding-bottom: 120px; }
-		/* For full width graphics on mobile */
-		.section-graphics { width: 80%; }
-		.section-graphics.left {margin-left: 15%; margin-right: 5%;}
-		.section-graphics.right {margin-left: 5%; margin-right: 15%;}
-		.section-body {
-			padding-top: 60px;
-			clear: both; //For full width graphics on mobile
-		}/**/
-		.section-body.right{margin-left: 0; }
-		.section-body.left{ margin-right: 0; }
-		/* For wrapping text around graphics 
-		.section-graphics {	width: 60%;}
-		.section-body p{  letter-spacing: 0.02em; }/**/
-	}
-	
-	/* [---Card style---]*/
-	ul.cards_container{
-		display: flex;		flex-wrap: wrap;
-		padding: 0;		margin: 0 0 -8% 0;
-		list-style-type: none;
-		width: 75%;
-		float: right;
-		transform: translate(0, -50%);
-		background-color: white;
-		box-shadow: -5px 10px 100px 5px rgba(144, 224, 224, 0.26);
-		border-radius: 10px 0 0 10px;
-	}
-	li.card {
-		width: 33.3%;
-		margin: 5% 0%;
-		padding: 0 5%;
-		float: left;
-		box-sizing: border-box;
-	}
-	li.card h3{ font: 30px Abel, serif; margin: 0; }
-	li.card p{ font: 18px Noto Sans, sans-serif; margin: 9px 0 0 0; }
-	@media only screen and (orientation: portrait) {
-		ul.cards_container{
-			width: 100%;
-			float: none;
-			margin: 0 0 0 0;
-			transform: translate(0, 0);
-		}
-		li.card p { font-size: 2.75vw;}
-	}
-	
-	@media only screen and (orientation: landscape) {
-		#science {
-			margin: 0 5% 0 0;
-			box-shadow: -5px 10px 100px 5px rgba(144, 224, 224, 0.26);
-			border-radius: 0 10px 10px 0;
-			padding-bottom: 160px;
-			background-color: inherit;
-		}
-		.filler {
-			position: absolute;
-			height: 500px;
-			width: 100%;
-			background-color: #0D394C;
-			transform: translate(0, -500px);
-			z-index: -2;
-		}
-		footer {
-			margin-top: 120px;
-			padding-top: 0px;
+		.toc { float: none; }
+		#in-page-nav .body {width: 100%; float: none; margin-bottom: 30px;}
+		.cards li {
+			width: 47%;
 		}
 	}
 	</style>
@@ -205,129 +166,213 @@
 <body>
 <div id="title">
 	<div id="titleGraphics">
-	<!--video playsinline autoplay muted loop>
-		<source src="res/neuron1right.mov" type="video/mp4"/>
-	</video-->
+		<img src="res/researchTitle.png"></img>
 	</div>
 	
 	<div id="titleTextContainer">
-	<h1 id="titleTitle"> ABOUT US <br/> </h1>
-	<p id="titleSubtext"> OUR VISION IS TO ACCELERATE THE WORLD'S 
-	TECHNOLOGY IN NEUROSCIENCE AND HEAL THE BRAIN </p>
+	<h1 id="titleTitle"> THE <br/> RESEARCH <br/> BEHIND IT ALL </h1>
 	</div>
 </div>
 
-<div id="about-us" class="section" style="padding-top: 120px; padding-bottom: 120px;">
-	<div class="header" style="float: left;">
-		<h2 style="line-height: 1; margin-top: 2px; text-align: center"> About Us </h2>
-		<div style="display: flex; justify-content: center;"><a class="button"> LEARN MORE </a></div>
-	</div>
+<div id="in-page-nav" class="section" style="padding-top: 60px; padding-bottom: 120px; overflow: auto;">
 	<div class="body"> 
-		<p style="margin-bottom: 0px; margin-top: 0px;">NoetherTech is a neuro-optimization company that researches,
-		diagnoses, and treats neurological and psychiatric disorders.</p> 
-		
-		<p style="margin-top: 11px;">Brought by the same innovators behind the Newport Brain 
-		Research Laboratory (NBRL), Brain Treatment Center (BTC) and creators of the MRT and MeRT 
-		technologies currently used by WaveNeuro.</p>
+		<p style="margin-bottom: 0px; margin-top: 0px;"> Our approach innovatively targets treatment 
+		based on powerful third party research that has been published in the most prestigious 
+		scientific journals. Below you will find the peer-reviewed and published research that builds 
+		the foundation of our approach to treatment of the brain.</p> 
+	</div>
+	
+	<div class="toc">
+		<h3 style="line-height: 1;"> GO TO: </h3>
+		<ol>
+			<li><a href="#neuromodulation"> NeuroModulation Support Documents</a></li>
+			<li><a href="#mert">Our Previous Innovative Technology (MeRT) Support Documents</a></li>
+			<li><a href="#eeg">EEG Support Documents</a></li>
+		</ol>
 	</div>
 </div>
 
-<div id="technology" class="section" style="background-color: #4BA9D2; overflow: auto;">
-	<div class="section-graphics left" style="margin-top: 40px">
-		<canvas id="grid1" width="250" height="250" style="margin-top: 61%;"></canvas>
-		<img src="res/brainTopGray.jpg"></img>
-		<p style="border-color: #C6E4D5;"></p>
-		<h2 class="labelNo" style="color: #C6E4D5"> 01.<br/><br/><h2>
-		<h2 class="label"> Our <br/>Technology <h2>
+
+<div id="neuromodulation" class="section" style="overflow:auto;">
+	<div class="header">
+		<p class="gimmick-line"></p>
+		<p class="label"> 01. </p>
+		<h2> NeuroModulation Support Documents </h2>
+	</div>
+	
+	<ul class="cards">
+		<li><div>
+			<div class="graphics">
+				<canvas id="grida1" width="250" height="250"></canvas>
+				<img src="res/research/brainStimulation.png"></img>
+				<script> drawGrid("grida1", "#4DAAD2", 12); </script>
+			</div>
+			<h3> Frontiers in Integrative Neuroscience</h3>
+			<h4> Repetitive transcranial magnetic stimulation affects behaviour
+			by biasing endogenous cortical oscillations </h4>
+			<h5> Brain Stimulation can affect function of stimulated brain tissue </h5>
+		</div></li>
 		
-		<script> drawGrid("grid1", "#C6E4D5", 12); </script>
-	</div>
-	
-	<div class="section-body right">
-	<h2> A Platform to Restore Brain Health </h2>
-	<p style="margin-bottom: 0px; margin-top: 11px;"> We analyze neural information and utilize our
-	Electromagnetic Brain Pulse (EMBP) neural modulation therapy to optimize brain health and 
-	restore functionality. </p>
-	
-	<p style="margin-top: 9px;  margin-bottom: 30px"> Our combined expertise in neuroscience, innovative machine learning
-	analysis, and cutting-edge use EMBP neuro-stimulation has actualized in our patented, 
-	personalized, and non-invasive neuromodulation treatment. </p>
-	
-	<a class="button" href="our_technology.html"> LEARN MORE </a>
-	</div>
-</div>
-<!--div class="cards_container_wrapper"-->
-	<ul class="cards_container">
-		<li class="card" style="border-right: 1px solid #C6E4D5;"><div>
-			<h3> Non-Invasive </h3>
-			<p>EMBP is pain-free and non-invasive. It doesn’t involve surgery,
-			anesthesia, or sedation. </p>
+		<li><div>
+			<div class="graphics">
+				<canvas id="grida2" width="250" height="250"></canvas>
+				<img src="res/research/currentBio-rhytmicTMS.png"></img>
+				<script> drawGrid("grida2", "#4DAAD2", 12); </script>
+			</div>
+			<h3> Current Biology</h3>
+			<h4> Rhythmic TMS Causes Local Entrainment of Natural Oscillatory Signatures </h4>
+			<h5> Brain Stimulation can affect function of stimulated brain tissue </h5>
 		</div></li>
-		<li class="card" style="border-right: 1px solid #C6E4D5;"><div>
-			<h3> Drug Free</h3>
-			<p>EMBP is a drug-free treatment that uses electromagnetic
-			pulses to retrain brain activity</p>
-		</div></li>
-		<li class="card"><div>
-			<h3> Non-Systemic </h3>
-			<p>Our treatment has no effects on other areas of your
-			body as antidepressants do.</p>
+		
+		<li><div>
+			<div class="graphics">
+				<canvas id="grida3" width="250" height="250"></canvas>
+				<img src="res/research/brainStimulation.png"></img>
+				<script> drawGrid("grida3", "#4DAAD2", 12); </script>
+			</div>
+			<h3> Current Biology </h3>
+			<h4> Making Waves in the Brain: What Are Oscillations, and Why Modulating 
+			Them Makes Sense for Brain Injury </h4>
+			<h5>  Injury induced disruption of neuronal oscillations has profound impacts 
+			on neural connectivity & behavior. Changes in EEG can be used as a biomarker 
+			to confirm mild and moderate TBI. </h5>
 		</div></li>
 	</ul>
-	<!--/div-->
+</div>
 
-<div id="history" class="section" style="overflow: hidden;">
-	<div class="section-graphics right">
-		<canvas id="grid2" width="250" height="250"></canvas>
-		<img src="res/brainTopGray.jpg"></img>
-		<p style="border-color: #1F789D;"></p>
-		<h2 class="labelNo" style="color: #1F789D"> 02.<br/><br/><h2>
-		<h2 class="label"> Our <br/> History <h2>
+<div id="mert" class="section"  style="background-color: #1F789D; overflow:auto;">
+	<div class="header">
+		<p class="gimmick-line"></p>
+		<p class="label"> 02. </p>
+		<h2> Our Previous Innovative Technology (MeRT) <br/> Support Documents </h2>
+	</div>
+	
+	<ul class="cards">
+		<li><div>
+			<div class="graphics">
+				<canvas id="gridb1" width="250" height="250"></canvas>
+				<img src="res/research/traumaMonthly.png"></img>
+				<script> drawGrid("gridb1", "#90E0E0", 12); </script>
+			</div>
+			<h3> Trauma Monthly</h3>
+			<h4> Magnetic Resonance Therapy Improves Clinical Phenotype and EEG Alpha Power
+			in Post-traumatic Stress Disorder </h4>
+			<h5> MeRT showed statistically significant improvements (p&#60;0.001) in PTSD 
+			Checklist-Military (PCL-M) in pre and post treatment scores. This was corroborated 
+			by quantitative-EEG findings demonstrating increased global alpha band power 
+			(p=0.013) and delta band decrease (p=0.028). These data show trends towards 
+			normalization of EEG and concomitant clinical improvements using MeRT stimulation 
+			for PTSD. </h5>
+		</div></li>
 		
-		<script> drawGrid("grid2", "#1F789D", 12); </script>
-	</div>
-	
-	<div class="section-body left">
-	<h2> Why EMBP? </h2>
-	<p style="margin-bottom: 0px; margin-top: 11px;"> Brain-wave-guided transcranial magnetic 
-	stimulation treatment was discovered by Yi Jin, MD, through his academic research and 
-	clinical applications over the past 30 years. It has been developed in combination with 
-	his knowledge of the first principles of thermodynamics, and information processing of the 
-	brain, and his clinical experiences in psychiatry. </p>
-	
-	<p style="margin-top: 9px;  margin-bottom: 30px">According to his theory, cognition and its anomalies are 
-	epiphenomena of underlying survival strategies of the central nervous system. Abnormal 
-	behaviors are modeled as phenomena caused by deviations from the default state and subsequent
-	compensatory changes in the brain. Electromagnetic Brain Pulsing Treatment (EMBP) is a new, 
-	advanced and proprietary technology, developed and patented by NoetherTech. In essence, the 
-	treatment identifies the patient’s brain condition through quantitative analyses and delivers 
-	a customized, pulse-matching, electromagnetic stimulation to normalize the brain condition. </p>
-	<a class="button"> LEARN MORE </a>
-	</div>
+		<li><div>
+			<div class="graphics">
+				<canvas id="gridb2" width="250" height="250"></canvas>
+				<img src="res/research/aerospaceMed.png"></img>
+				<script> drawGrid("gridb2", "#90E0E0", 12); </script>
+			</div>
+			<h3> Aerospace Medical Association </h3>
+			<h4> Magnetic E-Resonant therapy alleviates combat related post-traumatic 
+			stress disorder </h4>
+			<h5> MeRT&#8480; may be a promising adjunctive treatment to help veterans 
+			suffering from PTSD. </h5>
+		</div></li>
+		
+		<li><div>
+			<div class="graphics">
+				<canvas id="gridb3" width="250" height="250"></canvas>
+				<img src="res/research/aans.png"></img>
+				<script> drawGrid("gridb3", "#90E0E0", 12); </script>
+			</div>
+			<h3> American Association of Neurological Surgeons </h3>
+			<h4> Improved autism behaviors after noninvasive cerebral trans-magnetic stimulation 
+			using customized frequency modulation: follow-up mean 24 months </h4>
+			<h5> A chart review of ASD patients receiving MeRT℠ was performed on 141 patients. 
+			Clinical improvement was noted in the majority of patients - Class I research data is 
+			necessary to confirm this data.</h5>
+		</div></li>
+		
+		<li><div>
+			<div class="graphics">
+				<canvas id="gridb4" width="250" height="250"></canvas>
+				<img src="res/research/austinPublishingGroup.png"></img>
+				<script> drawGrid("gridb4", "#90E0E0", 12); </script>
+			</div>
+			<h3> Austin Publishing Group </h3>
+			<h4> The Potential of Magnetic Resonant Therapy in Children with 
+			Autism Spectrum Disorder </h4>
+			<h5> MeRT&#8480; may be a therapeutic option to pursue given EEG abnormalities in 
+			children with ASD. </h5>
+		</div></li>
+		
+		<li><div>
+			<div class="graphics">
+				<canvas id="gridb5" width="250" height="250"></canvas>
+				<img src="res/research/sbmt.png"></img>
+				<script> drawGrid("gridb5", "#90E0E0", 12); </script>
+			</div>
+			<h3> Society for Brain Mapping & Therapeutics </h3>
+			<h4> Noninvasive EEG-EKG guided trans-magnetic stimulation at natural resonance 
+			frequency in children with autism: randomized double-blinded pilot study </h4>
+			<h5> MeRT&#8480; may impart EEG and clinical changes in children with ASD, with 
+			more research necessary at this time. </h5>
+		</div></li>
+	</ul>
 </div>
 
 
-<div id="science" class="section">
-	<div class="section-graphics left">
-		<canvas id="grid3" width="250" height="250"></canvas>
-		<img src="res/emmyNoether.jpg"></img>
-		<p style="border-color: #90E0E0;"></p>
-		<h2 class="labelNo" style="color: #90E0E0"> 03.<br/><br/><h2>
-		<h2 class="label"> The <br/>Science <h2>
-		
-		<script> drawGrid("grid3", "#90E0E0", 12); </script>
+<div id="eeg" class="section"  style="overflow:auto; padding-bottom: 0;">
+	<div class="header">
+		<p class="gimmick-line"></p>
+		<p class="label"> 03. </p>
+		<h2> EEG Support Documents </h2>
 	</div>
+	
+	<ul class="cards">
+		<li><div>
+			<div class="graphics">
+				<canvas id="gridc1" width="250" height="250"></canvas>
+				<img src="res/research/nature.png"></img>
+				<script> drawGrid("gridc1", "#4DAAD2", 12); </script>
+			</div>
+			<h3> Austin Publishing Group </h3>
+			<h4> The Potential of Magnetic Resonant Therapy in Children with Autism 
+			Spectrum Disorder </h4>
+			<h5> MeRT&#8480; may be a therapeutic option to pursue given EEG abnormalities in 
+			children with ASD. </h5>
+		</div></li>
+		
+		<li><div>
+			<div class="graphics">
+				<canvas id="gridc2" width="250" height="250"></canvas>
+				<img src="res/research/dementiaNeuropsychologia.png"></img>
+				<script> drawGrid("gridc2", "#4DAAD2", 12); </script>
+			</div>
+			<h3> Society for Brain Mapping & Therapeutics </h3>
+			<h4> Noninvasive EEG-EKG guided trans-magnetic stimulation at natural resonance 
+			frequency in children with autism: randomized double-blinded pilot study </h4>
+			<h5> MeRT&#8480; may impart EEG and clinical changes in children with ASD, with 
+			more research necessary at this time. </h5>
+		</div></li>
+		
+		<li><div>
+			<div class="graphics">
+				<canvas id="gridc3" width="250" height="250"></canvas>
+				<img src="res/research/cellPress.png"></img>
+				<script> drawGrid("gridc3", "#4DAAD2", 12); </script>
+			</div>
+			<h3> CellPress </h3>
+			<h4> The Speed of Alpha-Band Oscillations Predicts the Temporal Resolution of 
+			Visual Perception </h4>
+			<h5> Brainwave speed and specific function relates to processing speed. </h5>
+		</div></li>
+	</ul>
+</div>
 
-	<div class="section-body right">
-	<h2> In Honor of Mathematician <br/> Amalie Emmy Noether </h2>
-	<p style="margin-top: 11px; margin-bottom: 30px">
-		NoetherTech is named as a homage to Amalie Emmy Noether, a 20th-century mathematician best known for her contributions to abstract algebra and the discovery of Noether’s Theorem. She has been praised as one of the most significant figures in mathematics by Albert Einstein, Jean Dieudonné, and Norbert Wiener, to name a few. 
-	</p>
-	<a class="button"> LEARN MORE <!-- about what ---> </a>
-	<p style="margin-bottom: 30px; padding-top: 11px;">
-		Noether’s theorem, initially a solution to special relativity in Einstein’s theory of general relativity, proved that all physical system symmetries of actions correspond to a conservational law. Now a fundamental tool in modern theoretical physics, this revolutionary theorem inspired and contributed to our technology.
-	</p>
-	<a class="button"> LEARN MORE <!-- about what ---> </a>
+<div class="section">
+	<div style="display: flex; justify-content: center;">
+	<a class="button" style="margin-right: 5%;" href="our_technology.html"> LEARN MORE ABOUT OUR TECHNOLOGY </a>
+	<a class="button"> LEARN MORE ABOUT THE ISSUED PATENTS</a>
 	</div>
 </div>
 
