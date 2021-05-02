@@ -52,21 +52,21 @@
 	footer .body *{ text-align: center; color: white;}
 	
 	/* [---Title---] */
-	#title{
-		width: 100%;	height: 44vw;
-		background-color: #4DAAD2;
-		border-radius: 0px 10px 0px 100px;
-		padding: 0; 
+	#title { width: 100%;	height: 44vw;	padding: 0;}
+	#title #titleGraphics{ overflow: hidden; }
+	#title img{
+		padding: 0;		margin: 0;
+		height: 100%;
+		overflow: hidden;
+		transform: translate(-10%, 0);
 	}
 	#title #titleTextContainer{
-		position: absolute;
-		transform: translate(0, 74%);
-		left: 10%;
-		width: 70%;
+		position: absolute;		width: 70%;
+		top: 11.5vw;	left: 10%;
 	}
 	#titleTextContainer h1{
 		float: left;	text-align: left;
-		margin: 0;
+		margin: 0;		line-height: 1;
 		font: 6vw Abhaya Libre, serif;	color: white;
 	}
 	
@@ -120,9 +120,7 @@
 <body>
 <div id="title">
 	<div id="titleGraphics">
-	<!--video playsinline autoplay muted loop>
-		<source src="res/neuron1right.mov" type="video/mp4"/>
-	</video-->
+		<img src="res/researchTitle.png"></img>
 	</div>
 	
 	<div id="titleTextContainer">

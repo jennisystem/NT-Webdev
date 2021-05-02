@@ -41,6 +41,43 @@
 		}
 	}
 	
+	/* [---Navigation Bar---] */
+	nav { position: fixed; width: 65%; padding: 0 0 0 10%; height: 0; top:0;}
+	nav ul {
+		height: 1.25em;
+		list-style-type: none;
+		margin: 10px 0 0 0;
+		padding: 0;
+		display: flex; background: red;
+	}
+
+	nav li {  float: left; }
+	nav li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font: 22px Abel, sans-serif;
+		text-align: center;
+	}
+	a.contactUs{
+		width: 15%;
+		font: 12px Noto Sans TC, sans;
+		background-color: #90E0E0;
+		border-radius: 42px;
+		margin: 0.5em 0;
+	}
+	nav li .logo {
+		background-image: url('res/logo.png');
+		background-size: cover;
+		height: 1em; width: 1em;
+		margin-right: 1em;
+	}
+
+	nav li a:hover:not(.active) { background-color: #111; }
+	.active { background-color: #4CAF50; }
+	
 	/* [---Footer---] */
 	footer {
 		background-color: #0D394C;
@@ -51,23 +88,21 @@
 	footer .body *{ text-align: center; color: white;}
 	
 	/* [---Title---] */
-	#title { padding: 0; }
+	#title { width: 100%;	height: 44vw;	padding: 0;}
+	#title #titleGraphics{ overflow: hidden; }
 	#title img{
 		padding: 0;		margin: 0;
-		width: 100%;	height: auto;
-		overflow: hidden;
+		width: 100%;	height: 44vw;
+		overflow: hidden;	object-fit: cover;
 	}
 	#title #titleTextContainer{
-		position: absolute;
-		transform: translate(0, -220%);
-		left: 10%;
-		width: 70%;
+		position: absolute;		width: 70%;
+		top: 11.5vw;	left: 10%;
 	}
 	#titleTextContainer h1{
 		float: left;	text-align: left;
-		width: 70%;		margin: 0;
-		font: 6.6vw Abhaya Libre, serif;	color: white;
-		line-height: 1;
+		margin: 0;		line-height: 1;
+		font: 6vw Abhaya Libre, serif;	color: white;
 	}
 	
 	/* [---Sections---] */
@@ -137,10 +172,25 @@
 
 <!-- Page body -->
 <body>
+<nav>
+	<div class="contactUs">
+		<a style="float:right" class="contactUs" href="#about">CONTACT US</a>
+	</div>
+	<ul>
+	  <li><a href="" class="logo"></a></li>
+	  <li><a href="">Technology</a></li>
+	  <li><a href="">Science</a></li>
+	  <li><a href="">Company</a></li>
+	</ul>
+</nav>
+
 <div id="title">
-	<img src="res/neuronStaticCropped.png"></img>
+	<div id="titleGraphics">
+		<img src="res/neuronStaticCropped.png"></img>
+	</div>
+	
 	<div id="titleTextContainer">
-	<h1 id="titleTitle"> OUR TECHNOLOGY <br/> </h1>
+	<h1 id="titleTitle"> OUR <br/> TECHNOLOGY <br/> </h1>
 	</div>
 </div>
 
