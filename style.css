@@ -125,14 +125,16 @@ nav li .logo {
 	background-image: url('res/logo.png');
 	background-size: cover;
 	height: 1em; width: 1em;
-	margin-right: 3em;
+	margin-right: 6em;
 }
-nav li a:hover:not(.active) { background-color: #0F4860; font-weight: 600;}
-.active { background-color: #76C4E5; color: black; font-weight: 600;}
+nav li a:hover:not(.active) { color:#90E0E0; } /*background-color: #0F4860; font-weight: 600;*/
+.active { } /*color: black; background-color: #76C4E5; font-weight: 600;*/
 
 
 .fixed-nav {
-	background-color: rgb(31, 120, 157, .9);
-	padding: 0.5em 10%;
+	background-color: #90E0E0; /*rgb(31, 120, 157, 1); /**/
+	padding: 0.85em 10%;
 	transition: 1s;
 }
+.fixed-nav li a:hover:not(.active) { color:#0D394C; } /*background-color: #0F4860; font-weight: 600;*/
+.fixed-nav.active { } /*color: black; background-color: #76C4E5; font-weight: 600;*/
