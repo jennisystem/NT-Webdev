@@ -7,110 +7,11 @@
 	<link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<script src="grid.js"></script>
+	<script src="scripts.js"></script>
+	<link href="style.css" rel="stylesheet">
 	<style>
-	/* [---General---] */
-	body { background-color: white; margin: 0; }
-	* { font: 48px Abel, sans-serif; color: #02223B; }
-	p { font: 18px Noto Sans, sans; line-height: 150%;}
-	a.button {
-		font: 12px Noto Sans TC, sans;
-		font-weight: bold;
-		letter-spacing: 0.15em;
-		background-color: #90E0E0;
-		padding: 10px calc(42px - 2em) 10px 42px;
-		border-radius: 42px;
-		color: #011627;
-		text-align: center;
-		transition: 1s;
-	}
-	a.button:link { text-decoration: none; }
-	a.button:hover { text-decoration: none; opacity: 0.8;}
-	a.button::after{
-		content: "→";
-		padding: 0 1.5em 0 0.5em;
-		transition: 1s;
-	}
-	a.button:hover::after{
-		padding: 0 0 0 2em;
-	}
-	@media only screen and (orientation: portrait) {
-		* { font-size: 36px; }
-		a.button {
-			padding: 10px 1em 10px 1em;
-		}
-	}
-	
-	/* [---Navigation Bar---] */
-	nav { position: fixed; width: 65%; padding: 0 0 0 10%; height: 0; top:0;}
-	nav ul {
-		height: 1.25em;
-		list-style-type: none;
-		margin: 10px 0 0 0;
-		padding: 0;
-		display: flex; background: red;
-	}
-
-	nav li {  float: left; }
-	nav li a {
-		display: block;
-		color: white;
-		text-align: center;
-		padding: 14px 16px;
-		text-decoration: none;
-		font: 22px Abel, sans-serif;
-		text-align: center;
-	}
-	a.contactUs{
-		width: 15%;
-		font: 12px Noto Sans TC, sans;
-		background-color: #90E0E0;
-		border-radius: 42px;
-		margin: 0.5em 0;
-	}
-	nav li .logo {
-		background-image: url('res/logo.png');
-		background-size: cover;
-		height: 1em; width: 1em;
-		margin-right: 1em;
-	}
-
-	nav li a:hover:not(.active) { background-color: #111; }
-	.active { background-color: #4CAF50; }
-	
-	/* [---Footer---] */
-	footer {
-		background-color: #0D394C;
-		margin-top: 60px;
-		padding-top: 60px;
-		padding-bottom: 60px;
-	}
-	footer .body *{ text-align: center; color: white;}
-	
-	/* [---Title---] */
-	#title { width: 100%;	height: 44vw;	padding: 0;}
-	#title #titleGraphics{ overflow: hidden; }
-	#title img{
-		padding: 0;		margin: 0;
-		width: 100%;	height: 44vw;
-		overflow: hidden;	object-fit: cover;
-	}
-	#title #titleTextContainer{
-		position: absolute;		width: 70%;
-		top: 11.5vw;	left: 10%;
-	}
-	#titleTextContainer h1{
-		float: left;	text-align: left;
-		margin: 0;		line-height: 1;
-		font: 6vw Abhaya Libre, serif;	color: white;
-	}
-	
-	/* [---Sections---] */
-	div.section { padding: 60px 10%; }
-	/*@media only screen and (orientation: portrait) {
-		div.section { padding: 60px 12%; }
-	}*/
-	div.section-body h2{ margin-bottom: 0px; }
+	/* Title*/
+	#title img{ width: 100%; height: 44vw; object-fit: cover; }
 	
 	/* Section Graphics */
 	.section-graphics {
@@ -172,17 +73,8 @@
 
 <!-- Page body -->
 <body>
-<nav>
-	<div class="contactUs">
-		<a style="float:right" class="contactUs" href="#about">CONTACT US</a>
-	</div>
-	<ul>
-	  <li><a href="" class="logo"></a></li>
-	  <li><a href="">Technology</a></li>
-	  <li><a href="">Science</a></li>
-	  <li><a href="">Company</a></li>
-	</ul>
-</nav>
+<nav id="main-navbar"></nav>
+<script> makeNavbar(1); </script>
 
 <div id="title">
 	<div id="titleGraphics">

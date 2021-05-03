@@ -7,88 +7,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<script src="grid.js"></script>
+	<script src="scripts.js"></script>
+	<link href="style.css" rel="stylesheet">
 	<style>
-	/* [---General---] */
-	body { background-color: white; margin: 0; }
-	* { font: 48px Abel, sans-serif; color: #02223B; }
-	p { font: 18px Noto Sans, sans; line-height: 150%;}
-	a.button {
-		font: 12px Noto Sans TC, sans;
-		font-weight: bold;
-		letter-spacing: 0.15em;
-		background-color: #90E0E0;
-		padding: 10px calc(42px - 2em) 10px 42px;
-		border-radius: 42px;
-		color: #011627;
-		text-align: center;
-		transition: 1s;
-	}
-	a.button:link { text-decoration: none; }
-	a.button:hover { text-decoration: none; opacity: 0.8;}
-	a.button::after{
-		content: "→";
-		padding: 0 1.5em 0 0.5em;
-		transition: 1s;
-	}
-	a.button:hover::after{
-		padding: 0 0 0 2em;
-	}
-	@media only screen and (orientation: portrait) {
-		* { font-size: 36px; }
-		a.button {
-			padding: 10px 1em 10px 1em;
-		}
-	}
-	
-	
-	/* [---Footer---] */
-	footer {
-		background-color: #0D394C;
-		margin-top: 60px;
-		padding-top: 60px;
-		padding-bottom: 60px;
-	}
-	footer .body *{ text-align: center; color: white;}
-	
-	/* [---Title---] */
-	#title { width: 100%;	height: 44vw;	padding: 0;}
-	#title #titleGraphics{ overflow: hidden; }
-	#title img{
-		padding: 0;		margin: 0;
-		height: 100%;
-		overflow: hidden;
-		transform: translate(-10%, 0);
-	}
-	#title #titleTextContainer{
-		position: absolute;		width: 70%;
-		top: 11.5vw;	left: 10%;
-	}
-	#titleTextContainer h1{
-		float: left;	text-align: left;
-		margin: 0;		line-height: 1;
-		font: 6vw Abhaya Libre, serif;	color: white;
-	}
+	#title img{ height: 100%; transform: translate(-10%, 0); }
 	
 	/* [---Sections---] */
-	div.section { padding: 60px 10%; }
-	/*@media only screen and (orientation: portrait) {
-		div.section { padding: 60px 12%; }
-	}*/
-	div.header { position: relative; }
-	p.gimmick-line{
-		position: absolute;
-		border-top: 3px solid #90E0E0;	border-left: 3px solid #90E0E0;
-		height: 10px; top: -30%;
-		left: -10%;	width: 10%;
-		font-size: 0px;
-	}
-	p.label {
-		position: absolute;
-		left: -10%;
-		top: 0;		transform: translate(0, -70%);
-		color: #90E0E0;		font: 22px Abel, sans-serif
-	}
 	div.header { margin-bottom: 18px; }
 	
 	#intro .section-graphics { float:right; width:50%; position: relative; }
@@ -118,6 +42,9 @@
 
 <!-- Page body -->
 <body>
+<nav id="main-navbar"></nav>
+<script> makeNavbar(2); </script>
+
 <div id="title">
 	<div id="titleGraphics">
 		<img src="res/researchTitle.png"></img>
