@@ -1,0 +1,62 @@
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="scripts.js"></script>
+	<link href="style.css" rel="stylesheet">
+	<style>
+	#title img{ height: 100%; transform: translate(-10%, 0); }
+	
+	/* [---Sections---] */
+	div.header { margin-bottom: 18px; }
+	
+	#intro .section-graphics { float:right; width:50%; position: relative; }
+	#intro .section-graphics canvas{ position: absolute; width: 15%; right:-1%; }
+	#intro .section-graphics img{ position: relative; width: 90%; margin: 5%; }
+	
+	.textbox{
+		width: 30%;	padding: 0 0.25em;
+		border: 3px solid #4DAAD2;	border-radius: 20px;
+		box-sizing: border-box;
+	}
+	.textbox *{ font: 20px Noto Sans, sans-serif; color: #4DAAD2; }
+	#lawsOfTherm { float:left;	margin-right: 2.5% }
+	#lawsOfTherm h3 {text-align: center;}
+	#lawsOfTherm ol {padding-left: 1.2em;}
+	#lawsOfTherm li {margin-bottom: 0.5em;}
+	#quote1 { float: right;	margin: 6px; }
+	#quote1 * { text-align: center; }
+	
+	@media only screen and (orientation: portrait){
+		#intro .section-graphics {width: 100%; margin-bottom: 60px;}
+		.textbox{ float: none; width: 100%; margin-bottom: 30px; }
+		#quote1 { margin-bottom: 30px; }
+	}
+	</style>
+</head>
+
+<!-- Page body -->
+<body>
+<nav id="main-navbar"></nav>
+<script> makeNavbar(2); </script>
+
+<iframe src="res/pdf/schizo_Jin_2005.pdf" width="100%" height="100%"></iframe>
+
+<footer>
+	<div class="filler"></div>
+	<!--iv class="body">
+		<h2> Interested? </h2>
+		<p> We hope to meet each other <br/>very soon. </p>
+	</div>
+	
+	<div class="footer">
+	</div-->
+</footer>
+
+</body>
+</html>
