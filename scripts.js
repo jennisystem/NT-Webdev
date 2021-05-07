@@ -29,8 +29,8 @@ function makeNavbar(activePage){
 		'<a href="index.html" class="companyName">NoetherTech</a></div>'+
 		'<ul id="main-navbar-navigation"><li><a href="our_technology.html"' + ((activePage==1) ? ' class="active"' : '') + '>Technology</a></li>'+
 		'<li><a href="science.html"' + ((activePage==2) ? ' class="active"' : '') + '>Science</a></li>'+
-		'<li><a href="about_us.html"' + ((activePage==3) ? ' class="active"' : '') + '>Company</a></li>'+
-		'<li><a href="history.html"' + ((activePage==3) ? ' class="active"' : '') + '>History</a></li>'+
+		'<ul class="navbar-dropdown"><li><a href="about_us.html"' + ((activePage==3) ? ' class="active"' : '') + '>Company</a></li>'+
+		'<li><a href="history.html"' + ((activePage==3) ? ' class="active"' : '') + '>History</a></li></ul>'+
 		'<li id="contactUsButton"><a href="">Contact Us</a></li>'+
 		'</ul><span id="contactUs"><a class="button" href="">CONTACT US</a></span>'+
 		'<a onclick="showMenuBar()" id="dropdown"></a>';
