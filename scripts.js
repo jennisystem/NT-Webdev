@@ -29,8 +29,9 @@ function makeNavbar(activePage){
 		'<a href="index.html" class="companyName">NoetherTech</a></div>'+
 		'<ul id="main-navbar-navigation"><li><a href="our_technology.html"' + ((activePage==1) ? ' class="active"' : '') + '>Technology</a></li>'+
 		'<li><a href="science.html"' + ((activePage==2) ? ' class="active"' : '') + '>Science</a></li>'+
-		'<ul class="navbar-dropdown"><li><a href="about_us.html"' + ((activePage==3) ? ' class="active"' : '') + '>Company</a></li>'+
-		'<li><a href="history.html"' + ((activePage==3) ? ' class="active"' : '') + '>History</a></li></ul>'+
+		'<li class="navbar-dropdown"><a onclick="showCompanyDropdown()"' + ((activePage==3) ? ' class="active"' : '') + ' style="cursor: pointer;">Company</a><ul id="companyDropdown">'+
+			'<li><a href="about_us.html">About Us</a></li>'+
+			'<li><a href="history.html">History</a></li></ul></li>'+
 		'<li id="contactUsButton"><a href="">Contact Us</a></li>'+
 		'</ul><span id="contactUs"><a class="button" href="">CONTACT US</a></span>'+
 		'<a onclick="showMenuBar()" id="dropdown"></a>';
@@ -59,5 +60,18 @@ function showMenuBar(){
 	}else{
 		navbar.style.display = "none";
 		contactUs.style.display = "none";
+	}
+}
+
+
+/**
+ *	Toggles the visibility of the navigation bar/menu.
+ */
+function showCompanyDropdown(){
+	let companyDropdownElem = document.getElementById("companyDropdown");
+	if(companyDropdownElem.style.display == "none"){
+		companyDropdownElem.style.display = "flex";
+	}else{
+		companyDropdownElem.style.display = "none";
 	}
 }

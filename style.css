@@ -122,9 +122,9 @@ nav li a {
 	text-decoration: none;
 	font: 28px Abel, sans-serif;
 }
-nav .navbar-dropdown:not(:first-child){
-	color: red;
-}
+nav .navbar-dropdown{ align-self: flex-start; }
+#companyDropdown { flex-direction: column; align-items: center; width: 100%;}
+nav .navbar-dropdown ul{ display: none; }
 nav a.button::after{ content: ""; }
 .logoName { width: 30%; diplay: flex; align-items: center; 	height: 1.25em; }
 .logo {
