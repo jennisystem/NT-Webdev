@@ -29,12 +29,15 @@ function makeNavbar(activePage){
 		'<a href="index.html" class="companyName">NoetherTech</a></div>'+
 		'<ul id="main-navbar-navigation"><li><a href="our_technology.html"' + ((activePage==1) ? ' class="active"' : '') + '>Technology</a></li>'+
 		'<li><a href="science.html"' + ((activePage==2) ? ' class="active"' : '') + '>Science</a></li>'+
-		'<li class="navbar-dropdown"><a onclick="showCompanyDropdown()"' + ((activePage==3) ? ' class="active"' : '') + ' style="cursor: pointer;">Company</a><ul id="companyDropdown">'+
-			'<li><a href="about_us.html">About Us</a></li>'+
-			'<li><a href="history.html">History</a></li></ul></li>'+
+		'<li class="navbar-dropdown"><a onclick="showCompanyDropdown()"' + ((activePage==3 || activePage==4) ? ' class="active"' : '') + ' style="cursor: pointer;">Company</a><ul id="companyDropdown">'+
+			'<li><a href="about_us.html"' + ((activePage==3) ? ' class="active"' : '') + '>About Us</a></li>'+
+			'<li><a href="history.html"' + ((activePage==4) ? ' class="active"' : '') + '>History</a></li></ul></li>'+
 		'<li id="contactUsButton"><a href="">Contact Us</a></li>'+
-		'</ul><span id="contactUs"><a class="button" href="">CONTACT US</a></span>'+
+		'</ul><span id="contactUs"><a class="button" href="">CONTACT US</a><p></p></span>'+
 		'<a onclick="showMenuBar()" id="dropdown"></a>';
+		
+	let companyDropdownElem = document.getElementById("companyDropdown");
+	companyDropdownElem.style.display == "none";
 }
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
@@ -54,12 +57,12 @@ window.onscroll = function() {scrollHandler()};
 function showMenuBar(){
 	var navbar = document.getElementById("main-navbar-navigation");
 	var contactUs = document.getElementById("contactUsButton");
-	if(navbar.style.display == "none" || navbar.style.display == ""){
-		navbar.style.display = "inline-block";
-		contactUs.style.display = "inline-block";
-	}else{
+	if(navbar.style.display == "inline-block"){
 		navbar.style.display = "none";
 		contactUs.style.display = "none";
+	}else{
+		navbar.style.display = "inline-block";
+		contactUs.style.display = "inline-block";
 	}
 }
 
@@ -69,9 +72,11 @@ function showMenuBar(){
  */
 function showCompanyDropdown(){
 	let companyDropdownElem = document.getElementById("companyDropdown");
-	if(companyDropdownElem.style.display == "none"){
-		companyDropdownElem.style.display = "flex";
-	}else{
+	if(companyDropdownElem.style.display == "flex"){
 		companyDropdownElem.style.display = "none";
+		companyDropdownElem.classList.remove("dropped")
+	}else{
+		companyDropdownElem.style.display = "flex";
+		companyDropdownElem.classList.add("dropped")
 	}
 }

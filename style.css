@@ -123,7 +123,7 @@ nav li a {
 	font: 28px Abel, sans-serif;
 }
 nav .navbar-dropdown{ align-self: flex-start; }
-#companyDropdown { flex-direction: column; align-items: center; width: 100%;}
+#companyDropdown { flex-direction: column; align-items: flex-start; width: 100%;}
 nav .navbar-dropdown ul{ display: none; }
 nav a.button::after{ content: ""; }
 .logoName { width: 30%; diplay: flex; align-items: center; 	height: 1.25em; }
@@ -142,9 +142,21 @@ nav a.button::after{ content: ""; }
 	line-height: 1;
 	padding: 0;
 }
+#contactUs {float: right; width: 50%;}
+#contactUs a {
+	position: absolute; right: 10%; 
+	transform: translate(0, -15%);
+	border: 1px solid #90E0E0;
+	background-color: inherit;
+	color: white;
+}
 #contactUsButton{ display: none; }
-nav li a:hover:not(.active):not(.companyName) { color:#90E0E0; } /*background-color: #0F4860; font-weight: 600;*/
-.active { } /*color: black; background-color: #76C4E5; font-weight: 600;*/
+#companyDropdown *{
+	position: relative;
+	width: 100%;
+}
+nav li a:hover:not(.active):not(.companyName) { color:#90E0E0; }
+.active { color:#90E0E0; } /*color: black; background-color: #76C4E5; font-weight: 600;*/
 #dropdown {
 	background-image: url('res/hamburger-icon.png');	background-size: 100% 100%;
 	position: absolute; top:1.25em; right: 10%; width: 1em; height: 1em;
@@ -189,8 +201,26 @@ nav li a:hover:not(.active):not(.companyName) { color:#90E0E0; } /*background-co
 	transition: 1s;
 }
 .fixed-nav li a:hover:not(.active):not(.companyName) { color:#0D394C; } /*background-color: #0F4860; font-weight: 600;*/
-.fixed-nav.active { } /*color: black; background-color: #76C4E5; font-weight: 600;*/
+.fixed-nav .active { color:#0D394C; } /*color: black; background-color: #76C4E5; font-weight: 600;*/
 .fixed-nav #dropdown{
 	top: 0.5em;
 	transition: 1s;
+}
+.fixed-nav #contactUs a {
+	border: 1px solid white;
+}
+
+#companyDropdown.dropped a{
+	background: white;
+	color: black;
+}
+#companyDropdown.dropped a:hover{
+	display: list-item;
+	list-style-type: disc;
+	list-style-position: inside;
+}
+#companyDropdown.dropped a.active{
+	display: list-item;
+	list-style-type: disc;
+	list-style-position: inside;
 }
