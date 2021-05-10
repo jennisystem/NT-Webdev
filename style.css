@@ -3,6 +3,7 @@ body { background-color: white; margin: 0; }
 * { font: 48px Abel, sans-serif; color: #02223B; }
 p { font: 18px Noto Sans, sans; line-height: 150%;}
 a.button {
+	display: inline-block;
 	font: 12px Noto Sans TC, sans;
 	font-weight: bold;
 	letter-spacing: 0.15em;
@@ -166,12 +167,22 @@ nav li a:hover:not(.active):not(.companyName) { color:#90E0E0; }
 }
 
 @media only screen and (orientation: portrait) {
-	#dropdown { display: inline-block;}
+	#dropdown { display: inline-block; top: 0.5em;}
 	.logoName {
 		width: 80%;
 		overflow: hidden;
 	}
 	.logo { width: 1.5em;}
+	nav {
+		position: sticky;
+		top: 0;
+		width: 100%;
+		background-color: #90E0E0;
+		padding: 1em 10%;
+	}
+	#title #titleTextContainer{
+		top: 20vw;
+	}
 	nav ul{
 		display: none; 
 		background-color: #1F789D;
@@ -191,6 +202,7 @@ nav li a:hover:not(.active):not(.companyName) { color:#90E0E0; }
 		display: none;
 		font: 18px Abel, sans-serif;
 	}
+	
 }
 @media only screen and (orientation: landscape){
 	#contactUsButton{ display: none; visibility: hidden;}
