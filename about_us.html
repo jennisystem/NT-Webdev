@@ -12,20 +12,10 @@
 	<link href="style.css" rel="stylesheet">
 	<style>
 	/* [---Title---] */
-	#title{
-		background-color: #5ed5f3;
-		border-radius: 0px 0px 0px 100px;
-	}
-	#titleGraphics img{
-		position: absolute;
-		top: 11.5vw;
-		width: 40%;		right: 10%;
-		transform: translate(0, 10%);
-	}
-	#titleGraphics canvas{
-		position: absolute;
-		top: 11.5vw;
-		width: 18%;		right: 6.5%;
+	#title img{
+		padding: 0;		margin: 0;
+		width: 100%;	height: auto;
+		overflow: hidden;
 	}
 	#title #titleTextContainer{ width: 35%; }
 	@media only screen and (orientation: portrait) {
@@ -73,14 +63,10 @@
 <script> makeNavbar(3); </script>
 
 <div id="title">
-	<div id="titleGraphics">
 	<!--video playsinline autoplay muted loop>
 		<source src="res/neuron1right.mov" type="video/mp4"/>
 	</video-->
-		<canvas id="titleGrid" width="375" height="250" style=""></canvas>
-		<img src="res/brainArt.png"></img>
-		<script> drawGrid("titleGrid", "#C6E4D5", 18); </script>
-	</div>
+	<img src="res/about_us.png"></img>
 	
 	<div id="titleTextContainer">
 	<h1 id="titleTitle"> ABOUT US <br/> </h1>
@@ -115,7 +101,7 @@
 
 <div id="background" class="section" style="overflow: auto;">
 	<div class="section-graphics left" style="margin-top: 40px;">
-		<img src="res/neuronGreen.jpg"></img>
+		<img src="res/brainArt.png"></img>
 		<!--canvas id="grid1" width="250" height="250" style="margin-top: 61%;"></canvas>
 			//img was here
 		<p style="border-color: #C6E4D5;"></p>

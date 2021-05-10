@@ -66,7 +66,7 @@ function makeNavbar(activePage){
 			'<ul id="companyDropdown" onmouseover="showCompanyDropdown()" onmouseout="hideCompanyDropdown();">'+
 			'<li><a href="about_us.html"' + ((activePage==3) ? ' class="active"' : '') + '>About Us</a></li>'+
 			'<li><a href="history.html"' + ((activePage==4) ? ' class="active"' : '') + '>History</a></li></ul></li>'+
-		'<li id="company-drop-btn-mob"><a onclick="toggleCompanyDropdown();"' + ((activePage==3 || activePage==4) ? ' class="active"' : '') + ' style="cursor: pointer;">Company</a></li>'+
+		'<li id="company-drop-btn-mob"><a onclick="toggleCompanyDropdown();"' + ((activePage==3 || activePage==4) ? ' class="active"' : '') + ' style="cursor: pointer;">Company <i class="gg-chevron-down" style="display: inline; margin-left: 1em; font-size: 16px;"></i> </a></li>'+
 		'<li><a class="dropdown-opts" href="about_us.html"' + ((activePage==3) ? ' class="active"' : '') + '>About Us</a></li>'+
 		'<li><a class="dropdown-opts" href="history.html"' + ((activePage==4) ? ' class="active"' : '') + '>History</a></li>'+
 		'<li id="contactUsButton"><a href="">Contact Us</a></li>'+
