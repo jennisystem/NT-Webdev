@@ -78,11 +78,13 @@ footer .body *{ text-align: center; color: white;}
 }
 .sitemap-dropdown a{ padding-left: 1em; }
 #backToTop{
+	font-size: 40px;
 	align-self: flex-end;
 	text-decoration: none;
 	border: 1px solid #90E0E0;
 	border-radius: 50%;
 	width: 1.25em;
+	padding: 0.15em 0.25em 0.35em 0.25em;
 	text-align: center;
 	color: #90E0E0;
 	position: absolute;
@@ -183,6 +185,7 @@ nav li a {
 }
 nav .navbar-dropdown{ align-self: flex-start; }
 #companyDropdown { flex-direction: column; align-items: flex-start; width: 100%;}
+#companyDropdown *{text-align: left; padding-left: 1.25em; margin-left: -1em;}
 nav .navbar-dropdown ul{ display: none; }
 nav a.button::after{ content: ""; }
 .logoName { min-width: 5em; diplay: flex; align-items: center; 	height: 1.25em; }
@@ -226,10 +229,7 @@ nav li a:hover:not(.active):not(.companyName) { color:#90E0E0; }
 
 @media only screen and (orientation: portrait) {
 	#dropdown { display: inline-block; top: 0.5em;}
-	.logoName {
-		width: 80%;
-		overflow: visible;
-	}
+	.logoName { overflow: visible; }
 	.logo { width: 1em; padding-right: 0.2em;}
 	nav {
 		position: sticky;
@@ -238,9 +238,7 @@ nav li a:hover:not(.active):not(.companyName) { color:#90E0E0; }
 		background-color: #90E0E0;
 		padding: 1em 10%;
 	}
-	#title #titleTextContainer{
-		top: 20vw;
-	}
+	#title #titleTextContainer{ top: 20vw; }
 	nav ul{
 		display: none; 
 		background-color: #1F789D;
@@ -285,13 +283,18 @@ nav li a:hover:not(.active):not(.companyName) { color:#90E0E0; }
 	background: white;
 	color: black;
 }
-#companyDropdown.dropped a:hover{
-	display: list-item;
-	list-style-type: disc;
-	list-style-position: inside;
+#companyDropdown.dropped a:hover:before{
+	content: "\2022";
+	color: #90E0E0;
+	font-weight: bold;
+	display: inline-block;
+	width: 1em; 	margin-left: -1em;
 }
-#companyDropdown.dropped a.active{
-	display: list-item;
-	list-style-type: disc;
-	list-style-position: inside;
+
+#companyDropdown.dropped a.active:before{
+	content: "\2022";
+	color: #90E0E0;
+	font-weight: bold;
+	display: inline-block;
+	width: 1em; 	margin-left: -1em;
 }

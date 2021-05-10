@@ -28,21 +28,21 @@ function makeFooter(activePage){
 	footer.innerHTML += '<div id="sitemap">'+
 		'<div class="sitemap-col">'+
 			'<div class="logoName" style="font-size: 48px;"><a href="index.html" class="logo"></a><a href="index.html" class="companyName">NoetherTech</a></div>'+
+			'<p>&#169;2021 Noether Sciences and Technologies Inc. ALL RIGHTS RESERVED</p>'+
 		'</div>'+
 		'<div class="sitemap-col true-sitemap">'+
 			'<a href="index.html"' + ((activePage==0) ? ' class="active"' : '') + '>Homepage</a>'+
 			'<a href="our_technology.html"' + ((activePage==1) ? ' class="active"' : '') + '>Technology</a>'+
-			'<a class="directory' + ((activePage==3 || activePage==4) ? ' active' : '') + '" onclick="showSitemapCompany();" style="cursor: pointer;"> Company </a>'+
+			'<a id="sitemap-company-btn"class="directory' + ((activePage==3 || activePage==4) ? ' active' : '') + '" onclick="showSitemapCompany();" style="cursor: pointer;"> Company <i class="gg-chevron-down" style="display: inline; margin-left: 1em; font-size: 16px;"></i> </a>'+
 			'<div class="sitemap-dropdown" id="sitemap-company">'+
 				'<a href="about_us.html"' + ((activePage==3) ? ' class="active"' : '') + '>About Us</a>'+
 				'<a href="history.html"' + ((activePage==4) ? ' class="active"' : '') + '>History</a>'+
 			'</div><a href="science.html"' + ((activePage==2) ? ' class="active"' : '') + '>Science</a>'+
 		'</div>'+
 		'<div class="sitemap-col">'+
-			'<p>&#169;2021 Noether Sciences and Technologies Inc. ALL RIGHTS RESERVED</p>'+
 			'<p><a href="mailto:info@noethertech.com"">info@noethertech.com</a></p>'+
 		'</div>'+
-		'<a id="backToTop" href="#title">&#8593;</a>'+
+		'<a id="backToTop" href="#title">&#x2191;</a>'+
 	'</div>';
 }
 
@@ -62,7 +62,8 @@ function makeNavbar(activePage){
 		'<a href="index.html" class="companyName">NoetherTech</a></div>'+
 		'<ul id="main-navbar-navigation"><li><a href="our_technology.html"' + ((activePage==1) ? ' class="active"' : '') + '>Technology</a></li>'+
 		'<li><a href="science.html"' + ((activePage==2) ? ' class="active"' : '') + '>Science</a></li>'+
-		'<li class="navbar-dropdown"><a onclick="showCompanyDropdown()"' + ((activePage==3 || activePage==4) ? ' class="active"' : '') + ' style="cursor: pointer;">Company</a><ul id="companyDropdown">'+
+		'<li class="navbar-dropdown"><a onmouseover="showCompanyDropdown()" onmouseout="hideCompanyDropdown();"' + ((activePage==3 || activePage==4) ? ' class="active"' : '') + ' style="cursor: pointer;">Company</a>'+
+			'<ul id="companyDropdown"  onmouseover="showCompanyDropdown()" onmouseout="hideCompanyDropdown();">'+
 			'<li><a href="about_us.html"' + ((activePage==3) ? ' class="active"' : '') + '>About Us</a></li>'+
 			'<li><a href="history.html"' + ((activePage==4) ? ' class="active"' : '') + '>History</a></li></ul></li>'+
 		'<li id="contactUsButton"><a href="">Contact Us</a></li>'+
@@ -106,11 +107,12 @@ function showMenuBar(){
  */
 function showCompanyDropdown(){
 	let companyDropdownElem = document.getElementById("companyDropdown");
-	if(companyDropdownElem.style.display == "flex"){
-		companyDropdownElem.style.display = "none";
-		companyDropdownElem.classList.remove("dropped")
-	}else{
-		companyDropdownElem.style.display = "flex";
-		companyDropdownElem.classList.add("dropped")
-	}
+	companyDropdownElem.style.display = "flex";
+	companyDropdownElem.classList.add("dropped")
+}
+
+function hideCompanyDropdown(){
+	let companyDropdownElem = document.getElementById("companyDropdown");
+	companyDropdownElem.style.display = "none";
+	companyDropdownElem.classList.remove("dropped")
 }
