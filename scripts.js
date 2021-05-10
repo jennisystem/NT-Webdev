@@ -62,12 +62,13 @@ function makeNavbar(activePage){
 		'<a href="index.html" class="companyName">NoetherTech</a></div>'+
 		'<ul id="main-navbar-navigation"><li><a href="our_technology.html"' + ((activePage==1) ? ' class="active"' : '') + '>Technology</a></li>'+
 		'<li><a href="science.html"' + ((activePage==2) ? ' class="active"' : '') + '>Science</a></li>'+
-		'<li class="navbar-dropdown"><a onmouseover="showCompanyDropdown()" onmouseout="hideCompanyDropdown();"' + ((activePage==3 || activePage==4) ? ' class="active"' : '') + ' style="cursor: pointer;">Company</a>'+
+		'<li class="navbar-dropdown"><a id="company-drop-btn" onmouseover="showCompanyDropdown()" onmouseout="hideCompanyDropdown();"' + ((activePage==3 || activePage==4) ? ' class="active"' : '') + ' style="cursor: pointer;">Company</a>'+
 			'<ul id="companyDropdown" onmouseover="showCompanyDropdown()" onmouseout="hideCompanyDropdown();">'+
 			'<li><a href="about_us.html"' + ((activePage==3) ? ' class="active"' : '') + '>About Us</a></li>'+
 			'<li><a href="history.html"' + ((activePage==4) ? ' class="active"' : '') + '>History</a></li></ul></li>'+
-		'<li><a class="dropdown-opts" href="about_us.html"' + ((activePage==3) ? ' class="active"' : '') + ' onmouseover="showCompanyDropdown()" onmouseout="hideCompanyDropdown();">About Us</a></li>'+
-		'<li><a class="dropdown-opts" href="history.html"' + ((activePage==4) ? ' class="active"' : '') + ' onmouseover="showCompanyDropdown()" onmouseout="hideCompanyDropdown();">History</a></li>'+
+		'<li id="company-drop-btn-mob"><a onclick="toggleCompanyDropdown();"' + ((activePage==3 || activePage==4) ? ' class="active"' : '') + ' style="cursor: pointer;">Company</a></li>'+
+		'<li><a class="dropdown-opts" href="about_us.html"' + ((activePage==3) ? ' class="active"' : '') + '>About Us</a></li>'+
+		'<li><a class="dropdown-opts" href="history.html"' + ((activePage==4) ? ' class="active"' : '') + '>History</a></li>'+
 		'<li id="contactUsButton"><a href="">Contact Us</a></li>'+
 		'</ul><span id="contactUs"><a class="button" href="">CONTACT US</a><p></p></span>'+
 		'<a onclick="showMenuBar()" id="dropdown" style="cursor: pointer;"></a>';
@@ -109,24 +110,28 @@ function showMenuBar(){
  */
 function showCompanyDropdown(){
 	let companyDropdownElem = document.getElementById("companyDropdown");
-	if (window.matchMedia("(orientation: landscape)").matches) {
-		companyDropdownElem.style.display = "flex";
-		companyDropdownElem.classList.add("dropped")
+	companyDropdownElem.style.display = "flex";
+	companyDropdownElem.classList.add("dropped")
+}
+
+function hideCompanyDropdown(){
+	let companyDropdownElem = document.getElementById("companyDropdown");
+	companyDropdownElem.style.display = "none";
+	companyDropdownElem.classList.remove("dropped")
+	
+}
+
+function toggleCompanyDropdown(){
+	let companyDropdownElem = document.getElementById("companyDropdown");
+	let elems = document.getElementsByClassName("dropdown-opts");
+	if( companyDropdownElem.classList.contains("dropped") || elems[0].classList.contains("dropped") ){
+		for(let elem of document.getElementsByClassName("dropdown-opts")){
+			elem.classList.remove("dropped");
+		}
 	}else{
 		for(let elem of document.getElementsByClassName("dropdown-opts")){
 			elem.classList.add("dropped");
 		}
 	}
-}
-
-function hideCompanyDropdown(){
-	let companyDropdownElem = document.getElementById("companyDropdown");
-	if (window.matchMedia("(orientation: landscape)").matches) {
-		companyDropdownElem.style.display = "none";
-		companyDropdownElem.classList.remove("dropped")
-	}else{
-		for(let elem of document.getElementsByClassName("dropdown-opts")){
-			elem.classList.remove("dropped");
-		}
-	}
+	
 }

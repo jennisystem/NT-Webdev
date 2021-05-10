@@ -261,6 +261,8 @@ nav li a:hover:not(.active):not(.companyName) { color:#90E0E0; }
 		background: white; color: black; 
 		width: 100%;	margin: 0; 	padding-left: 0;
 	}
+	#company-drop-btn {display: none;}
+	#company-drop-btn-mob{ display: block; }
 }
 @media only screen and (orientation: landscape){
 	#contactUsButton{ display: none; visibility: hidden;}
@@ -277,6 +279,8 @@ nav li a:hover:not(.active):not(.companyName) { color:#90E0E0; }
 		color: #90E0E0;		font-weight: bold;
 		width: 1em; 		margin-left: -1em;
 	}
+	#company-drop-btn-mob{ display: none; }
+	#company-drop-btn{ display: block; }
 }
 
 .fixed-nav {
