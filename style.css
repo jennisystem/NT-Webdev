@@ -257,9 +257,20 @@ nav li a:hover:not(.active):not(.companyName) { color:#90E0E0; }
 	#companyDropdown{display: none;}
 	.dropdown-opts {display:none;}
 	.dropdown-opts.dropped {
-		display: block;
-		background: white; color: black; 
-		width: 100%;	margin: 0; 	padding-left: 0;
+		display: inline-block;
+		background: white; 	color: black; 
+		width: 100%;		border: 4px solid white;
+		margin: 0; 			padding-left: 0;
+	}
+	.dropdown-opts.dropped:hover:before{
+		content: "\2022";	display: inline-block;
+		color: #90E0E0;		font-weight: bold;
+		width: 1em; 		margin-left: -1em;
+	}
+	.dropdown-opts.dropped.active:before{
+		content: "\2022";	display: inline-block;
+		color: #90E0E0;		font-weight: bold;
+		width: 1em; 		margin-left: -1em;
 	}
 	#company-drop-btn {display: none;}
 	#company-drop-btn-mob{ display: block; }
