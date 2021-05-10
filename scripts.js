@@ -23,6 +23,39 @@ function drawGrid(elemId, dotColor, numX=9){
 	tmpCanvas.style.height = oldHeight;*/
 }
 
+function makeFooter(activePage){
+	var footer = document.getElementById("footer");
+	footer.innerHTML += '<div id="sitemap">'+
+		'<div class="sitemap-col">'+
+			'<div class="logoName" style="font-size: 48px;"><a href="index.html" class="logo"></a><a href="index.html" class="companyName">NoetherTech</a></div>'+
+		'</div>'+
+		'<div class="sitemap-col true-sitemap">'+
+			'<a href="index.html"' + ((activePage==0) ? ' class="active"' : '') + '>Homepage</a>'+
+			'<a href="our_technology.html"' + ((activePage==1) ? ' class="active"' : '') + '>Technology</a>'+
+			'<a class="directory' + ((activePage==3 || activePage==4) ? ' active' : '') + '" onclick="showSitemapCompany();" style="cursor: pointer;"> Company </a>'+
+			'<div class="sitemap-dropdown" id="sitemap-company">'+
+				'<a href="about_us.html"' + ((activePage==3) ? ' class="active"' : '') + '>About Us</a>'+
+				'<a href="history.html"' + ((activePage==4) ? ' class="active"' : '') + '>History</a>'+
+			'</div><a href="science.html"' + ((activePage==2) ? ' class="active"' : '') + '>Science</a>'+
+		'</div>'+
+		'<div class="sitemap-col">'+
+			'<p>&#169;2021 Noether Sciences and Technologies Inc. ALL RIGHTS RESERVED</p>'+
+			'<p><a href="mailto:info@noethertech.com"">info@noethertech.com</a></p>'+
+		'</div>'+
+		'<a id="backToTop" href="#title">&#8593;</a>'+
+	'</div>';
+}
+
+function showSitemapCompany(){
+	let dropdown = document.getElementById("sitemap-company");
+	console.log(dropdown.style.display);
+	if(dropdown.classList.contains("dropped")){
+		dropdown.classList.remove("dropped")
+	}else{
+		dropdown.classList.add("dropped")
+	}
+}
+
 function makeNavbar(activePage){
 	var navBar = document.getElementById("main-navbar");
 	navBar.innerHTML += '<div class="logoName"><a href="index.html" class="logo"></a>'+
@@ -50,6 +83,7 @@ function scrollHandler() {
 		navbar.classList.remove("fixed-nav");
 	}
 }
+
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {scrollHandler()};
 

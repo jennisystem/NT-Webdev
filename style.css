@@ -1,4 +1,5 @@
 /* [---General---] */
+html {scroll-behavior: smooth;}
 body { background-color: white; margin: 0; }
 * { font: 48px Abel, sans-serif; color: #02223B; }
 p { font: 18px Noto Sans, sans; line-height: 150%;}
@@ -17,7 +18,7 @@ a.button {
 a.button:link { text-decoration: none; }
 a.button:hover { text-decoration: none; opacity: 0.8;}
 a.button::after{
-	content: "→";
+	content: "\2192";
 	padding: 0 1.5em 0 0.5em;
 	transition: 1s;
 }
@@ -41,6 +42,63 @@ footer {
 	padding-bottom: 60px;
 }
 footer .body *{ text-align: center; color: white;}
+#sitemap {margin: 11px 10%; display: flex; flex-direction: row;}
+.sitemap-col * {color: white; font-size: 18px; line-height: 1;}
+.sitemap-col {
+	width: 28%;
+	margin: 1%;
+}
+.true-sitemap{
+	display: flex;
+	flex-direction: column;
+}
+.true-sitemap a{
+	font: 16px Noto Sans TC, sans;
+	text-decoration: none;
+	line-height: 2;
+}
+.true-sitemap a:hover:not(.directory):before{
+	content: "\2022";
+	color: #90E0E0;
+	font-weight: bold;
+	display: inline-block;
+	width: 1em; 	margin-left: -1em;
+}
+.true-sitemap a.active:before{
+	content: "\2022";
+	color: #90E0E0;
+	font-weight: bold;
+	display: inline-block;
+	width: 1em; 	margin-left: -1em;
+}
+.sitemap-dropdown{display: none;}
+.sitemap-dropdown.dropped{
+	display: flex;
+	flex-direction: column;
+}
+.sitemap-dropdown a{ padding-left: 1em; }
+#backToTop{
+	align-self: flex-end;
+	text-decoration: none;
+	border: 1px solid #90E0E0;
+	border-radius: 50%;
+	width: 1.25em;
+	text-align: center;
+	color: #90E0E0;
+	position: absolute;
+	right: 10%;
+}
+@media only screen and (orientation: portrait) {
+	#sitemap { flex-direction: column;}
+	.sitemap-col{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	#backToTop{
+		position: static;
+		align-self: center;
+	}
+}
 
 
 
@@ -127,12 +185,12 @@ nav .navbar-dropdown{ align-self: flex-start; }
 #companyDropdown { flex-direction: column; align-items: flex-start; width: 100%;}
 nav .navbar-dropdown ul{ display: none; }
 nav a.button::after{ content: ""; }
-.logoName { width: 30%; diplay: flex; align-items: center; 	height: 1.25em; }
+.logoName { min-width: 5em; diplay: flex; align-items: center; 	height: 1.25em; }
 .logo {
 	display: inline-block;
 	background-image: url('res/logo.png');
 	background-size: cover;
-	height: 48px; width: 1.2em;
+	font-size: 48px;	min-height: 1em; width: 1.2em;
 }
 .companyName{
 	color: white;
@@ -170,9 +228,9 @@ nav li a:hover:not(.active):not(.companyName) { color:#90E0E0; }
 	#dropdown { display: inline-block; top: 0.5em;}
 	.logoName {
 		width: 80%;
-		overflow: hidden;
+		overflow: visible;
 	}
-	.logo { width: 1.5em;}
+	.logo { width: 1em; padding-right: 0.2em;}
 	nav {
 		position: sticky;
 		top: 0;
