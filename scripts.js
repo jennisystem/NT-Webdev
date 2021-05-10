@@ -63,12 +63,14 @@ function makeNavbar(activePage){
 		'<ul id="main-navbar-navigation"><li><a href="our_technology.html"' + ((activePage==1) ? ' class="active"' : '') + '>Technology</a></li>'+
 		'<li><a href="science.html"' + ((activePage==2) ? ' class="active"' : '') + '>Science</a></li>'+
 		'<li class="navbar-dropdown"><a onmouseover="showCompanyDropdown()" onmouseout="hideCompanyDropdown();"' + ((activePage==3 || activePage==4) ? ' class="active"' : '') + ' style="cursor: pointer;">Company</a>'+
-			'<ul id="companyDropdown"  onmouseover="showCompanyDropdown()" onmouseout="hideCompanyDropdown();">'+
+			'<ul id="companyDropdown" onmouseover="showCompanyDropdown()" onmouseout="hideCompanyDropdown();">'+
 			'<li><a href="about_us.html"' + ((activePage==3) ? ' class="active"' : '') + '>About Us</a></li>'+
 			'<li><a href="history.html"' + ((activePage==4) ? ' class="active"' : '') + '>History</a></li></ul></li>'+
+		'<li><a class="dropdown-opts" href="about_us.html"' + ((activePage==3) ? ' class="active"' : '') + ' onmouseover="showCompanyDropdown()" onmouseout="hideCompanyDropdown();">About Us</a></li>'+
+		'<li><a class="dropdown-opts" href="history.html"' + ((activePage==4) ? ' class="active"' : '') + ' onmouseover="showCompanyDropdown()" onmouseout="hideCompanyDropdown();">History</a></li>'+
 		'<li id="contactUsButton"><a href="">Contact Us</a></li>'+
 		'</ul><span id="contactUs"><a class="button" href="">CONTACT US</a><p></p></span>'+
-		'<a onclick="showMenuBar()" id="dropdown"></a>';
+		'<a onclick="showMenuBar()" id="dropdown" style="cursor: pointer;"></a>';
 		
 	let companyDropdownElem = document.getElementById("companyDropdown");
 	companyDropdownElem.style.display == "none";
@@ -92,12 +94,12 @@ window.onscroll = function() {scrollHandler()};
 function showMenuBar(){
 	var navbar = document.getElementById("main-navbar-navigation");
 	var contactUs = document.getElementById("contactUsButton");
-	if(navbar.style.display == "inline-block"){
-		navbar.style.display = "none";
-		contactUs.style.display = "none";
+	if(navbar.classList.contains("dropped")){
+		navbar.classList.remove("dropped");
+		contactUs.classList.remove("dropped");
 	}else{
-		navbar.style.display = "inline-block";
-		contactUs.style.display = "inline-block";
+		navbar.classList.add("dropped");
+		contactUs.classList.add("dropped");
 	}
 }
 
@@ -107,12 +109,24 @@ function showMenuBar(){
  */
 function showCompanyDropdown(){
 	let companyDropdownElem = document.getElementById("companyDropdown");
-	companyDropdownElem.style.display = "flex";
-	companyDropdownElem.classList.add("dropped")
+	if (window.matchMedia("(orientation: landscape)").matches) {
+		companyDropdownElem.style.display = "flex";
+		companyDropdownElem.classList.add("dropped")
+	}else{
+		for(let elem of document.getElementsByClassName("dropdown-opts")){
+			elem.classList.add("dropped");
+		}
+	}
 }
 
 function hideCompanyDropdown(){
 	let companyDropdownElem = document.getElementById("companyDropdown");
-	companyDropdownElem.style.display = "none";
-	companyDropdownElem.classList.remove("dropped")
+	if (window.matchMedia("(orientation: landscape)").matches) {
+		companyDropdownElem.style.display = "none";
+		companyDropdownElem.classList.remove("dropped")
+	}else{
+		for(let elem of document.getElementsByClassName("dropdown-opts")){
+			elem.classList.remove("dropped");
+		}
+	}
 }

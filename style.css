@@ -213,10 +213,8 @@ nav a.button::after{ content: ""; }
 	color: white;
 }
 #contactUsButton{ display: none; }
-#companyDropdown *{
-	position: relative;
-	width: 100%;
-}
+#companyDropdown *{ position: relative;	width: 100%; }
+.dropdown-opts {display:none;}
 nav li a:hover:not(.active):not(.companyName) { color:#90E0E0; }
 .active { color:#90E0E0; } /*color: black; background-color: #76C4E5; font-weight: 600;*/
 #dropdown {
@@ -233,35 +231,52 @@ nav li a:hover:not(.active):not(.companyName) { color:#90E0E0; }
 	.logo { width: 1em; padding-right: 0.2em;}
 	nav {
 		position: sticky;
-		top: 0;
-		width: 100%;
-		background-color: #90E0E0;
-		padding: 1em 10%;
+		top: 0;		background-color: #90E0E0;
+		width: 100%;		padding: 1em 10%;
 	}
 	#title #titleTextContainer{ top: 20vw; }
 	nav ul{
-		display: none; 
-		background-color: #1F789D;
-		width: auto;
-		float: right;
-		position: absolute;
-		right: 10%;
-		padding-right: 1em;
+		display: none;		position: absolute;
+		float: right;		right: 10%;
+		flex-direction: column;
 	}
+	nav ul.dropped{
+		transition: 0s;	display: flex;
+		width: 100%;	position: absolute;
+		top: 2em; 		left: 0;
+	}
+	nav li{ width: 100%; }
 	nav li a {
-		text-align: center;
-		padding: 14px 16px;
-		font: 18px Abel, sans-serif;
+		background-color: #1F789D;	padding: 14px 16px;
+		text-align: center;			font: 18px Abel, sans-serif;
 	}
 	#contactUs{ display: none;}
-	#contactUsButton{
-		display: none;
-		font: 18px Abel, sans-serif;
-	}
+	#contactUsButton{ display: none;	font: 18px Abel, sans-serif; }
+	#contactUsButton.dropped{ display: inline-block; }
 	
+	#companyDropdown{display: none;}
+	.dropdown-opts {display:none;}
+	.dropdown-opts.dropped {
+		display: block;
+		background: white; color: black; 
+		width: 100%;	margin: 0; 	padding-left: 0;
+	}
 }
 @media only screen and (orientation: landscape){
 	#contactUsButton{ display: none; visibility: hidden;}
+	#main-navbar-navigation {display: flex}
+	.dropdown-opts { display: none; }
+	#companyDropdown.dropped a{ background: white; color: black; }
+	#companyDropdown.dropped a:hover:before{
+		content: "\2022";	display: inline-block;
+		color: #90E0E0;		font-weight: bold;
+		width: 1em; 		margin-left: -1em;
+	}
+	#companyDropdown.dropped a.active:before{
+		content: "\2022";	display: inline-block;
+		color: #90E0E0;		font-weight: bold;
+		width: 1em; 		margin-left: -1em;
+	}
 }
 
 .fixed-nav {
@@ -277,24 +292,4 @@ nav li a:hover:not(.active):not(.companyName) { color:#90E0E0; }
 }
 .fixed-nav #contactUs a {
 	border: 1px solid white;
-}
-
-#companyDropdown.dropped a{
-	background: white;
-	color: black;
-}
-#companyDropdown.dropped a:hover:before{
-	content: "\2022";
-	color: #90E0E0;
-	font-weight: bold;
-	display: inline-block;
-	width: 1em; 	margin-left: -1em;
-}
-
-#companyDropdown.dropped a.active:before{
-	content: "\2022";
-	color: #90E0E0;
-	font-weight: bold;
-	display: inline-block;
-	width: 1em; 	margin-left: -1em;
 }
