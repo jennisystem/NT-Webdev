@@ -81,10 +81,10 @@
 	}
 	.toc { float: left; }
 	
-	#mert * {color: white;}
-	#mert p.gimmick-line{ border-top: 3px solid #90E0E0;	border-left: 3px solid #90E0E0;	}
-	#mert p.label { color: #90E0E0; }
-	#mert h3 {color: #90E0E0;}
+	.contrast * {color: white;}
+	.contrast p.gimmick-line{ border-top: 3px solid #90E0E0;	border-left: 3px solid #90E0E0;	}
+	.contrast p.label { color: #90E0E0; }
+	.contrast h3 {color: #90E0E0;}
 	
 	
 	@media only screen and (orientation: portrait) {
@@ -123,6 +123,7 @@
 	<div class="toc">
 		<h3 style="line-height: 1;"> GO TO: </h3>
 		<ol>
+			<li><a href="#neuromodulation"> Attachments</a></li>
 			<li><a href="#neuromodulation"> NeuroModulation Support Documents</a></li>
 			<li><a href="#mert">Our Previous Innovative Technology (MeRT) Support Documents</a></li>
 			<li><a href="#eeg">EEG Support Documents</a></li>
@@ -130,11 +131,102 @@
 	</div>
 </div>
 
-
-<div id="neuromodulation" class="section" style="overflow:auto;">
+<div id="attachments" class="section" style="overflow:auto;">
 	<div class="header">
 		<p class="gimmick-line"></p>
 		<p class="label"> 01. </p>
+		<h2> Attachments </h2>
+	</div>
+	
+	<ul class="cards">
+		<li><div>
+			<div class="graphics">
+				<canvas id="gridd1" width="250" height="250"></canvas>
+				<img src="res/research/brainStimulation.png"></img>
+				<script> drawGrid("gridd1", "#4DAAD2", 12); </script>
+			</div>
+			<h3> The Journal of Child Psychology and Psychiatry</h3>
+			<h4> Optimal outcome in individuals with a history of autism </h4>
+			<h5> Aa </h5>
+		</div></li>
+		
+		<li><div>
+			<div class="graphics">
+				<canvas id="gridd2" width="250" height="250"></canvas>
+				<img src="res/research/currentBio-rhytmicTMS.png"></img>
+				<script> drawGrid("gridd2", "#4DAAD2", 12); </script>
+			</div>
+			<h3> TMS for Autism</h3>
+			<h4> Cerebral transmagnetic stimulation and contiguous EEG-guided frequency
+			adjustments for autism </h4>
+			<h5> Aa </h5>
+		</div></li>
+		
+		<li><div>
+			<div class="graphics">
+				<canvas id="gridd3" width="250" height="250"></canvas>
+				<img src="res/research/brainStimulation.png"></img>
+				<script> drawGrid("gridd3", "#4DAAD2", 12); </script>
+			</div>
+			<h3> Trauma ...</h3>
+			<h4> Magnetic Resonance Therapy Improves Clinical Phenotype and EEG Alpha
+			Power In Posttraumatic Stress Disorder</h4>
+			<h5> Aa </h5>
+		</div></li>
+		
+		<li><div>
+			<div class="graphics">
+				<canvas id="gridd4" width="250" height="250"></canvas>
+				<img src="res/research/brainStimulation.png"></img>
+				<script> drawGrid("gridd4", "#4DAAD2", 12); </script>
+			</div>
+			<h3> American Association of Neurological Surgeons</h3>
+			<h4> Improved autism behaviors after noninavasive cerebral trans-magnetic
+			stimulation using customized frequency modulation: follow-up mean 24 months</h4>
+			<h5> Aa </h5>
+		</div></li>
+		
+		<li><div>
+			<div class="graphics">
+				<canvas id="gridd5" width="250" height="250"></canvas>
+				<img src="res/research/currentBio-rhytmicTMS.png"></img>
+				<script> drawGrid("gridd5", "#4DAAD2", 12); </script>
+			</div>
+			<h3> Aa </h3>
+			<h4> Magnetic resonance therapy in Posttraumatic Stress Disorder:
+			a randomized, double-blind, sham controlled trial</h4>
+			<h5> Aa </h5>
+		</div></li>
+		
+		<li><div>
+			<div class="graphics">
+				<canvas id="gridd6" width="250" height="250"></canvas>
+				<img src="res/research/brainStimulation.png"></img>
+				<script> drawGrid("gridd6", "#4DAAD2", 12); </script>
+			</div>
+			<h3> Asia Health Care Journal December </h3>
+			<h4> rTMS Treament for Autism </h4>
+			<h5> Aa </h5>
+		</div></li>
+		
+		<li><div>
+			<div class="graphics">
+				<canvas id="gridd7" width="250" height="250"></canvas>
+				<img src="res/research/brainStimulation.png"></img>
+				<script> drawGrid("gridd7", "#4DAAD2", 12); </script>
+			</div>
+			<h3> Autism Science Digest</h3>
+			<h4> Therapeutic Application of Transcranial Magnetic Stimulation
+			In Autism Spectrum Disorders</h4>
+			<h5> Aa </h5>
+		</div></li>
+	</ul>
+</div>
+
+<div id="neuromodulation" class="section contrast" style="background-color: #1F789D; overflow:auto;">
+	<div class="header">
+		<p class="gimmick-line"></p>
+		<p class="label"> 02. </p>
 		<h2> NeuroModulation Support Documents </h2>
 	</div>
 	
@@ -178,10 +270,10 @@
 	</ul>
 </div>
 
-<div id="mert" class="section"  style="background-color: #1F789D; overflow:auto;">
+<div id="mert" class="section"  style="overflow:auto;">
 	<div class="header">
 		<p class="gimmick-line"></p>
-		<p class="label"> 02. </p>
+		<p class="label"> 03. </p>
 		<h2> Our Previous Innovative Technology (MeRT) <br/> Support Documents </h2>
 	</div>
 	
@@ -258,11 +350,10 @@
 	</ul>
 </div>
 
-
-<div id="eeg" class="section"  style="overflow:auto; padding-bottom: 0;">
+<div id="eeg" class="section contrast"  style="background-color: #1F789D; overflow:auto; padding-bottom: 0;">
 	<div class="header">
 		<p class="gimmick-line"></p>
-		<p class="label"> 03. </p>
+		<p class="label"> 04. </p>
 		<h2> EEG Support Documents </h2>
 	</div>
 	

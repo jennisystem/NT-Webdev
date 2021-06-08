@@ -40,7 +40,7 @@ function makeFooter(activePage){
 			'</div><a href="science.html"' + ((activePage==2) ? ' class="active"' : '') + '>Science</a>'+
 		'</div>'+
 		'<div class="sitemap-col">'+
-			'<p><a href="mailto:info@noethertech.com"">info@noethertech.com</a></p>'+
+			'<p><a href="mailto:info@noethertech.com">info@noethertech.com</a></p>'+
 		'</div>'+
 		'<a id="backToTop" href="#title">&#x2191;</a>'+
 	'</div>';
